@@ -1,2 +1,2 @@
 # FTELabWork
-codes and data of Openfoam and others done on FTE lab pc
+codes and data of Openfoam and others done in FTE lab pc
