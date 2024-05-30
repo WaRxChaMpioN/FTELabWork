@@ -65,6 +65,7 @@ Description
 
 #include "fvCFD.H"
 #include "pisoControl.H"
+#include "fvOptions.H" // Include the fvOptions header
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -105,6 +106,7 @@ int main(int argc, char *argv[])
             fvm::ddt(U)
           + fvm::div(phi, U)
           - fvm::laplacian(nu, U)
+          + fvOptions(U) // Include porosity effects in the momentum equation
         );
 
         if (piso.momentumPredictor())
@@ -162,6 +164,7 @@ int main(int argc, char *argv[])
             fvm::ddt(T)
           + fvm::div(phi, T)
           - fvm::laplacian(DT, T)
+          + fvOptions(T) // Include porosity effects in the temperature equation
         );
    solve(TEqn);
   
@@ -171,92 +174,6 @@ int main(int argc, char *argv[])
        runTime.printExecutionTime(Info);
 	
     }
-    
-    /********************************************************/
-    
-    //calculation of bulk Mean Temperature
-        
-
-        int x_=20;
-	int z_=350;
-	//double Temp = 293;
-	//double D = 0.002;
-	//double q = 1200;
-        List<scalar> T_mean(mesh.nCells()/x_);
-        List<scalar> Nu(mesh.nCells()/x_);
-/*        
-	for (int i = 0; i <(z_); i++)
-	{
-		double T_sum = 0;
-		int j = i*z_;
-		while (j < (x_*z_))
-		{
-		
-				Info<<T[i]<<endl;
-			T_sum += T[j];
-			j=j+300;		
-		}
-		
-		T_mean[i]= T_sum/x_;	
-		Info<<T_mean[i]<<endl;
-		
-	}
-	*/
-	
-	
-		int j = 0;	
-	
-	for (int i = 0; i <(z_); i++)
-	{
-	//	int k = x_;
-		double T_sum = 0;
-		while (j < (i+1)*x_)
-		{
-			//Info<<j<<endl;			
-			T_sum += T[j];
-			Info<< j<< " "<< T[j]<< " ";
-			j++;
-//			k--;		
-		}
-		Info<<endl;
-		T_mean[i] = T_sum/x_;
-		
-		
-		//H[i] = q/(T[20*i+19]-T_mean[i]);
-		
-		//Info << H[i]<< endl;
-		
-		// H[i] =  (D/((i+1)*8.33333e-5))* (T[20*i+19] - Temp)/(Temp - T_mean[i]) ; // constant wall temp
-		
-		
-	//	Nu[i] =  (6.6666)/(T[(i+1)*20-1] - T_mean[i]) ; // constant wall heat flux
-	
-	
-/*
-	
-	int iter = x_*(i+1)-1;
-	int iterm1 = (x_)*(i+1)-2;
-	
-	Info << T[iterm1]<< endl;
-	Info << T[iter]<< endl;
-	
-	Nu = 2*x_*(T[iter]-T[iterm1])/(T[iter] - T_mean[i]);
-		
-		Info<<T_mean[i]<<" "<< Nu[i] << endl;
-	
-	
-	
-	
-	for (int i =0; i <z_; i++)
-	{
-		
-	}
-    */
-    
-    }
-    Info<<mesh.nCells();
-    
-/********************************************************/
     
 
 

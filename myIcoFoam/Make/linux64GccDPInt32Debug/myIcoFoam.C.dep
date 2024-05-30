@@ -868,6 +868,11 @@ $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControlTemplates.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/solutionControlI.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pimpleControlI.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/pisoControlI.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvOptions.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvOptionList.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvOption.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvOptionI.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvOptionListTemplates.C \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/postProcess.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addRegionOption.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addFunctionObjectOptions.H \
@@ -881,6 +886,7 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H \
 createFields.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/createPhi.H \
+$(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/createFvOptions.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/initContinuityErrs.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/CourantNo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/continuityErrs.H \
