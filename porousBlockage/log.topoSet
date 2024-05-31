@@ -1,0 +1,41 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2306                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _fbf00d6bf2-20230626 OPENFOAM=2306 version=v2306
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : May 31 2024
+Time   : 16:51:08
+Host   : champ
+PID    : 164071
+I/O    : uncollated
+Case   : /home/kaushal/Desktop/porousBlockage
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created cellSet porousBlockageCellSet
+    Applying source boxToCell
+    Adding cells with centre within boxes 1((-0.5 -0.5 -1) (0.5 0.5 1))
+    cellSet porousBlockageCellSet now size 1024
+Created cellZoneSet porousBlockage
+    Applying source setToCellZone
+    Adding all cells from cell set: porousBlockageCellSet ...
+    cellZoneSet porousBlockage now size 1024
+
+End
+
