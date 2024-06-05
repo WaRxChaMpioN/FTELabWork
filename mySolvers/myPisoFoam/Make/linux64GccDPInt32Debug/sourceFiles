@@ -1,0 +1,4 @@
+SOURCE = \
+myPisoFoam.C \
+
+# sources

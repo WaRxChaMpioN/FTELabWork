@@ -1,0 +1,136 @@
+   /********************************************************/
+/*    
+    //calculation of bulk Mean Temperature
+        
+
+        int x_=45;
+	int z_=500;
+//	grad = Foam::fvc::snGrad(T).BoudarySurfield(j)
+	//double Temp = 293;
+	double Dia = 0.002;
+	double dx = 0.5*(Dia/x_) ;
+	double Um = 0.01;
+	//double L = 0.015;
+	//double Cp =4200;
+	//double K = 0.598;
+	//double Twall = 350;
+	//double rho = 1000;
+	//double q = 1200;
+        List<scalar> T_mean(mesh.nCells()/x_);
+        List<scalar> Nu(mesh.nCells()/x_);
+       
+      //  List<scalar> gradT = Foam::fvc::grad(T);
+     
+	for (int i = 0; i <(z_); i++)
+	{
+		double T_sum = 0;
+		int j = i*z_;
+		while (j < (x_*z_))
+		{
+		
+				Info<<T[i]<<endl;
+			T_sum += T[j];
+			j=j+300;		
+		}
+		
+		T_mean[i]= T_sum/x_;	
+		Info<<T_mean[i]<<endl;
+		
+	}
+	
+
+	
+		int j = 0;	
+	
+	for (int i = 0; i <(z_); i++)
+	{
+	//	int k = x_;
+			
+		double T_sum = 0;
+		//double gradX = 0;
+		int iter =1;
+		while (j < (i+1)*x_)
+		{	//double temp = sqr(U[j] .x()) +sqr(U[j] .y()) +sqr(U[j] .z());
+			//double Ures = Foam::sqrt(temp);
+			//double temp = U[j];
+			//Info<<j<<endl;			
+			T_sum += (U[j].z())*T[j]*(iter)*dx*dx;
+			//Info<< j<< " "<< U[j] .z()<< " "<<T_sum<<endl;
+			j++;
+//			k--;
+			iter++;		
+		}
+		
+		
+		
+		T_mean[i] = 8*T_sum/(Um*Dia*Dia);
+		
+		
+		//Info<<endl;
+	//	int iterm = x_*(i+1)-1;
+		//int iterm1 = (x_)*(i+1)-2;
+		
+		//T_mean[i] = 8*T_sum/(Um*Dia*Dia);
+		
+		//gradX = (T[j-1] - T[j-2])/(dx);
+		//tmp<GeometricField<double, fvPatchField, surfaceMesh> > snGradT = fvc::snGrad(T);
+		//vector gradient = snGradT()[j];
+		//double gradX = gradient[0];
+	//	Nu[i] = L* ((gradX)/(-T[j-1] + T_mean[i]) );
+		
+		
+		//H[i] = q/(T[20*i+19]-T_mean[i]);
+		
+		//Info << T_mean[i]<< endl;
+		//Info << Nu[i]<< endl;
+	
+
+	
+	int iterm = x_*(i+1)-1;
+	int iterm1 = (x_)*(i+1)-2;
+	
+	Info << T[iterm1]<< endl;
+	Info << T[iter]<< endl;
+	
+	Nu = 2*x_*(T[iterm]-T[iterm1])/(Twall - T_mean[i]);
+		
+		Info<<T_mean[i]<<" "<< Nu[i] << endl;
+	
+	
+	*/
+	
+ /*   
+
+    }
+    
+    for (int i=0; i<z_; i++)
+    {
+   // double grad = 0;
+   // double iter = 0;
+   // double iterm1 = 0;
+    
+    int iter = x_*(i+1)-1;
+	//int iterm1 = (x_)*(i+1)-2;
+	//Info << T[iterm1]<< endl;
+	//Info << T[iter]<< endl;
+    //	double gradT = ( (T_mean[i+1] - T[iter]) - (T_mean[i] - T[iterm1]))/(dx);
+   	//double gradT = 0.5*(Twall - T_mean[i])/Dia;
+    	//double q = rho*(Um)*Cp*(T[iter]-T_mean[i]);
+  //  Nu[i] = (((Dia*q)/K)/(T[iter] - T_mean[i]) );
+    Nu[i] = (0.25*Dia*(T[iter]-T[iter-2])/dx)/(T[iter] - T_mean[i]); // constant Temperature
+     //Nu[i] = Dia*(q/K)/(-T[iter] + T_mean[i]);
+   	//Nu[i] = L* ((gradT)/(T[iter] - T_mean[i]) );
+    	Info << Nu[i]<< endl;
+    //	Info << T[iter-19]<< endl;
+	
+    }
+ //   Info << endl << dx;
+   // Info<<mesh.nCells();
+   double dis = 0.020;
+   double Pr = 7;
+    double Re = 20;
+  double Gzd = Re*Pr*(Dia/dis);
+  double NusseltD = 3.66 + (0.0668*Gzd)/(1+0.04*Foam::cbrt(sqr(Gzd)));
+  Info << "analytical nusselt no at "<< dis << " is " << NusseltD;		*/
+    
+/********************************************************/
