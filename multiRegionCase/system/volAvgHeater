@@ -1,0 +1,25 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Version:  v2312
+    \\  /    A nd           | Website:  www.openfoam.com
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes out the maximum cell value for one or more fields.
+
+\*---------------------------------------------------------------------------*/
+
+type  volFieldValue;
+libs  ("libfieldFunctionObjects.so");
+log   true;
+writeFields  false;
+regionType  all;
+region  heater;
+name  heater;
+operation volAverage;
+weightField none;
+fields  (T);
+
+
+// ************************************************************************* //
