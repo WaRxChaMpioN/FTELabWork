@@ -1,0 +1,3 @@
+This folder have the fvDOM code whit in-scattering implemented.
+It requires nweight to be specify to run.
+Make sure to recompile radFoam before use.

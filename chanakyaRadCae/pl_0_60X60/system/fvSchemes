@@ -1,0 +1,74 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         steadyState;
+}
+
+gradSchemes
+{
+
+   // default        cellMDLimited Gauss linear 1.0;
+ //  default         Gauss linear;
+ //  default    none;
+ // grad(T)   leastSquares;  
+ //  grad(T)   Gauss; 
+ //    grad(T)   Gauss linear;
+  grad(U)   Gauss linear;
+  grad(T)   Gauss linear;
+  grad(p_rgh) Gauss linear;
+  grad(rhok) Gauss linear;
+ grad(Ii_h) Gauss linear;
+ //grad(Ii_h) cellMDLimited Gauss linear 1.0;
+  
+}
+
+divSchemes
+{
+    default         none;
+
+    div(phi,U)      Gauss linearUpwind grad(U);
+    div(phi,T)      bounded Gauss linearUpwind grad(T);
+    div(phi,k)      bounded Gauss linearUpwind;
+    div(phi,epsilon) bounded Gauss linearUpwind;
+    div((nuEff*dev2(T(grad(U))))) Gauss linear;
+    div(Ji,Ii_h)    bounded Gauss linearUpwind grad(Ii_h);
+   // div(Ji,Ii_h)    bounded Gauss LUST grad(Ii_h);
+  // div(Ji,Ii_h)    bounded Gauss grad(Ii_h);
+}
+
+
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
+
+interpolationSchemes
+{
+  
+   default    linear;
+}
+
+snGradSchemes
+{
+    default         corrected;
+  // default        none;
+}
+
+
+// ************************************************************************* //

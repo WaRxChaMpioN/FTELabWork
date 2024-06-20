@@ -1,0 +1,172 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2306                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0.045";
+    object      ILambda_12_0;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 0 -3 0 0 0 0];
+
+internalField   nonuniform List<scalar> 
+100
+(
+182.611
+536.133
+865.73
+1205.66
+1589.51
+1990.61
+2344.46
+2605.09
+2764.68
+2863.35
+182.398
+534.638
+868.477
+1219.16
+1602.96
+1971.01
+2255.45
+2428.79
+2508.98
+2535
+181.885
+534.281
+875.284
+1232.05
+1597.95
+1912.02
+2120.2
+2221.08
+2250.92
+2245.55
+181.092
+536.478
+886.508
+1236.88
+1555.7
+1785.84
+1904.05
+1937.53
+1931.19
+1911.66
+180.836
+542.946
+894.93
+1210.99
+1448.72
+1579.54
+1618.82
+1610.4
+1591.78
+1576.02
+182.735
+551.487
+882.79
+1128.09
+1265.23
+1309.8
+1303.05
+1283.85
+1271
+1265.67
+187.695
+548.959
+822.376
+971.685
+1020.69
+1017.53
+1001.56
+991.21
+988.457
+989.768
+191.697
+505.53
+683.245
+742.134
+742.478
+730.534
+723.864
+723.166
+724.709
+726.401
+176.347
+381.774
+451.895
+456.849
+447.939
+443.614
+443.853
+445.119
+445.818
+445.949
+96.9228
+153.548
+155.022
+149.812
+148.096
+148.306
+148.648
+148.658
+148.51
+148.357
+)
+;
+
+boundaryField
+{
+    fixedWall_Bottom
+    {
+        type            greyDiffusiveRadiation;
+        refValue        uniform 0;
+        refGradient     uniform 0;
+        valueFraction   uniform 0;
+        source          uniform 0;
+        value           nonuniform List<scalar> 10(182.611 536.133 865.73 1205.66 1589.51 1990.61 2344.46 2605.09 2764.68 2863.35);
+    }
+    fixedWall_Right
+    {
+        type            greyDiffusiveRadiation;
+        refValue        uniform 0;
+        refGradient     uniform 0;
+        valueFraction   uniform 0;
+        source          uniform 0;
+        value           nonuniform List<scalar> 10(2863.35 2535 2245.55 1911.66 1576.02 1265.67 989.768 726.401 445.949 148.357);
+    }
+    fixedWall_Left
+    {
+        type            greyDiffusiveRadiation;
+        refValue        uniform 0;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+        source          uniform 0;
+        value           uniform 0;
+    }
+    fixedWall_Top
+    {
+        type            greyDiffusiveRadiation;
+        refValue        uniform 0;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+        source          uniform 0;
+        value           uniform 0;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,62 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    //location    "constant"
+    object      radiationProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+radiation       on;
+
+radiationModel  fvDOM;
+
+fvDOMCoeffs
+{
+    nPhi        8;
+    nTheta      2;
+    maxIter     1;
+    tolerance   1e-3;
+    nWeights	 1; //qua
+}
+
+// Number of flow iterations per radiation iteration
+solverFreq 1;
+
+absorptionEmissionModel constantAbsorptionEmission;
+
+constantAbsorptionEmissionCoeffs
+{
+   absorptivity    absorptivity    [ m^-1 ]         0.1;
+   emissivity      emissivity      [ m^-1 ]         0;
+   E               E               [ kg m^-1 s^-3 ] 0;
+   weight  (1);
+}
+
+weight  (1);
+
+scatterModel    none;
+
+/*
+scatterModel    constantScatter;  //To test out scattering code
+
+constantScatterCoeffs
+{
+    sigma           sigma          [m^-1]            1.0;
+    C               C              [    ]            0.0;
+}
+*/
+sootModel       none;
+
+transmissivityModel none;
+
+
+// ************************************************************************* //
