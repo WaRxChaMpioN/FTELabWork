@@ -1,0 +1,3 @@
+convFvPatchScalarField.C
+
+LIB = $(FOAM_USER_LIBBIN)/convectiveBC

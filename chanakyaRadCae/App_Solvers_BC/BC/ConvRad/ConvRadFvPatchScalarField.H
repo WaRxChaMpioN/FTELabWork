@@ -1,0 +1,273 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     |
+    \\  /    A nd           | Copyright (C) 2011-2016 OpenFOAM Foundation
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+License
+    This file is part of OpenFOAM.
+
+    OpenFOAM is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+    for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
+
+Class
+    Foam::ConvRadFvPatchScalarField
+
+Group
+    grpGenericBoundaryConditions
+
+Description
+    This boundary condition provides a phase-based hydrostatic pressure
+    condition, calculated as:
+
+        \f[
+            p_{hyd} = p_{ref} + \rho g (x - x_{ref})
+        \f]
+
+    where
+    \vartable
+        p_{hyd} | hyrostatic pressure [Pa]
+        p_{ref} | reference pressure [Pa]
+        x_{ref} | reference point in Cartesian co-ordinates
+        \rho    | density (assumed uniform)
+        g       | acceleration due to gravity [m/s2]
+    \endtable
+
+    The values are assigned according to the phase-fraction field:
+    - 1: apply \$fp_{hyd}\$f
+    - 0: apply a zero-gradient condition
+
+Usage
+    \table
+        Property      | Description                 | Required | Default value
+        phaseFraction | phase-fraction field name   | no       | alpha
+        rho           | density field name          | no       | rho
+        pRefValue     | reference pressure [Pa]     | yes      |
+        pRefPoint     | reference pressure location | yes      |
+    \endtable
+
+    Example of the boundary condition specification:
+    \verbatim
+    <patchName>
+    {
+        type            ConvRad;
+        phaseFraction   alpha1;
+        rho             rho;
+        pRefValue       1e5;
+        pRefPoint       (0 0 0);
+        value           uniform 0; // optional initial value
+    }
+    \endverbatim
+
+See also
+    Foam::mixedFvPatchScalarField
+
+SourceFiles
+    ConvRadFvPatchScalarField.C
+
+\*---------------------------------------------------------------------------*/
+
+#ifndef ConvRadFvPatchScalarField_H
+#define ConvRadFvPatchScalarField_H
+
+#include "mixedFvPatchFields.H"
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+namespace Foam
+{
+
+/*---------------------------------------------------------------------------*\
+         Class ConvRadFvPatchScalarField Declaration
+\*---------------------------------------------------------------------------*/
+
+class ConvRadFvPatchScalarField
+:
+    public mixedFvPatchScalarField
+{
+
+protected:
+
+    // Protected data
+
+         //- free stream heat coefficient
+        scalarField hinf_;
+
+        //- free stream temperature
+        scalarField Tinf_;
+
+        //- conductivity of the medium
+        scalarField Kappa_;
+        
+        //- Name of radiation field
+        word QRName_;
+        
+
+
+public:
+
+    //- Runtime type information
+    TypeName("ConvRad");
+
+
+    // Constructors
+
+        //- Construct from patch and internal field
+        ConvRadFvPatchScalarField
+        (
+            const fvPatch&,
+            const DimensionedField<scalar, volMesh>&
+        );
+
+        //- Construct from patch, internal field and dictionary
+        ConvRadFvPatchScalarField
+        (
+            const fvPatch&,
+            const DimensionedField<scalar, volMesh>&,
+            const dictionary&
+        );
+
+        //- Construct by mapping given
+        //  ConvRadFvPatchScalarField onto a new patch
+        ConvRadFvPatchScalarField
+        (
+            const ConvRadFvPatchScalarField&,
+            const fvPatch&,
+            const DimensionedField<scalar, volMesh>&,
+            const fvPatchFieldMapper&
+        );
+
+        //- Construct as copy
+        ConvRadFvPatchScalarField
+        (
+            const ConvRadFvPatchScalarField&
+        );
+
+        //- Construct and return a clone
+        virtual tmp<fvPatchScalarField> clone() const
+        {
+            return tmp<fvPatchScalarField >
+            (
+                new ConvRadFvPatchScalarField(*this)
+            );
+        }
+
+        //- Construct as copy setting internal field reference
+        ConvRadFvPatchScalarField
+        (
+            const ConvRadFvPatchScalarField&,
+            const DimensionedField<scalar, volMesh>&
+        );
+
+        //- Construct and return a clone setting internal field reference
+        virtual tmp<fvPatchScalarField> clone
+        (
+            const DimensionedField<scalar, volMesh>& iF
+        ) const
+        {
+            return tmp<fvPatchScalarField>
+            (
+                new ConvRadFvPatchScalarField(*this, iF)
+            );
+        }
+
+
+    // Member functions
+
+        // Attributes
+
+            //- Return true: this patch field is altered by assignment
+            virtual bool assignable() const
+            {
+                return true;
+            }
+
+
+        // Access
+
+      /*      //- Return the phaseFraction
+          scalarField& hinf() const
+            {
+                return hinf_;
+            }
+
+            //- Return reference to the phaseFraction to allow adjustment
+            scalarField& hinf()
+            {
+                return hinf_;
+            }
+
+            //- Return the constant density in the far-field
+            scalarField& Tinf() const
+            {
+                return Tinf_;
+            }
+
+            //- Return reference to the constant density in the far-field
+            //  to allow adjustment
+            scalarField& Tinf()
+            {
+                return Tinf_;
+            }
+
+            //- Return the reference pressure
+            scalarField& Kappa() const
+            {
+                return Kappa_;
+            }
+
+            //- Return reference to the reference pressure to allow adjustment
+            scalarField& Kappa()
+            {
+                return Kappa_;
+            }
+
+          */ 
+           
+           
+           //- Return the phaseFraction
+            const word& QRName() const
+            {
+                return QRName_;
+            }
+
+            //- Return reference to the phaseFraction to allow adjustment
+            word& QRName()
+            {
+                return QRName_;
+            }
+
+           
+        //- Update the coefficients associated with the patch field
+        virtual void updateCoeffs();
+
+        //- Write
+        virtual void write(Ostream&) const;
+
+
+    // Member operators
+
+        virtual void operator=(const fvPatchScalarField& pvf);
+};
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+} // End namespace Foam
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#endif
+
+// ************************************************************************* //

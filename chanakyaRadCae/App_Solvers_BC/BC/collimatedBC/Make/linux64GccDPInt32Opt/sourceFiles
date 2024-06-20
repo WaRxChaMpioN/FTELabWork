@@ -1,0 +1,4 @@
+SOURCE = \
+collimatedbeamMixedFvPatchScalarField.C \
+
+# sources
