@@ -64,10 +64,15 @@ Description
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
+#include "radiationModel.H"
 #include "pisoControl.H"
+#include "scatterModel.H" 
 #include "fvOptions.H" // Include the fvOptions header
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Declare cumulativeContErr before using it
+scalar cumulativeContErr = 0;
 
 int main(int argc, char *argv[])
 {
@@ -78,18 +83,18 @@ int main(int argc, char *argv[])
     );
 
     #include "postProcess.H"
-
+    #include "setRootCase.H"
     #include "addCheckCaseOptions.H"
-    #include "setRootCaseLists.H"
     #include "createTime.H"
     #include "createMesh.H"
-
-    pisoControl piso(mesh);
+    #include "createFvOptions.H"
 
     #include "createFields.H"
-    #include "initContinuityErrs.H"
+  //  #include "initContinuityErrs.H"
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+    pisoControl piso(mesh);
 
     Info<< "\nStarting time loop\n" << endl;
 
@@ -106,8 +111,6 @@ int main(int argc, char *argv[])
             fvm::ddt(U)
           + fvm::div(phi, U)
           - fvm::laplacian(nu, U)
-          ==
-           fvOptions(U) // Include porosity effects in the momentum equation
         );
         UEqn.relax();
 
@@ -170,10 +173,14 @@ int main(int argc, char *argv[])
             fvm::ddt(T)
           + fvm::div(phi, T)
           - fvm::laplacian(DT, T)
-        //  ==
-         //  fvOptions(T) // Include porosity effects in the temperature equation
+          ==
+            radiation->ST(rhoCpRef,T)
+         //  adding source term considering radiation in temperature equation
         );
-   solve(TEqn);
+        TEqn.relax();
+        TEqn.solve();
+
+        radiation->correct();
    // fvOptions.correct(T);
   
 /********************************************************/
