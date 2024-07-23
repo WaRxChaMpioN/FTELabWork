@@ -1,0 +1,2 @@
+-np 4 run_fluid_parallel.sh
+-np 4 run_solid_parallel.sh

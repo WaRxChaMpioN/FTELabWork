@@ -1,0 +1,28 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+(cd fluid && runApplication blockMesh)
+(cd solid && runApplication blockMesh)
+(cd fluid && runApplication setFields)
+(cd solid && runApplication setFields)
+
+# Run serial
+mpirun -app ./mpirun.schema
+
+# Run parallel
+(cd fluid && runApplication decomposePar)
+(cd solid && runApplication decomposePar)
+
+#mpirun -app ./mpirun.schema_parallel
+# The problem is keeping the log files separate so use the openmpi
+# mpirun option to keep the separate outputs in the logs/ directory
+
+mpirun \
+    --output-filename logs \
+    -np 4 interFoam -case fluid -world fluid -parallel : \
+    -np 4 interFoam -case solid -world solid -parallel \
+    >& log.interFoam
+
+#------------------------------------------------------------------------------
