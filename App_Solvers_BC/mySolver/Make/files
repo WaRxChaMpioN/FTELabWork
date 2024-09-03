@@ -1,0 +1,5 @@
+
+opaqueModels/oqfvDOM/oqfvDOM/oqfvDOM.C
+opaqueModels/oqfvDOM/oqradiativeIntensityRay/oqradiativeIntensityRay.C
+
+LIB = $(FOAM_USER_LIBBIN)/oqradiation

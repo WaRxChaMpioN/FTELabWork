@@ -1,0 +1,2192 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : chtMultiRegionSimpleFoam
+Date   : Aug 29 2024
+Time   : 11:30:57
+Host   : warxchampion
+PID    : 1013959
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : chtMultiRegionSimpleFoam
+Date   : Aug 29 2024
+Time   : 11:30:57
+Host   : warxchampion
+PID    : 1013960
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : chtMultiRegionSimpleFoam
+Date   : Aug 29 2024
+Time   : 11:30:57
+Host   : warxchampion
+PID    : 1013961
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : chtMultiRegionSimpleFoam
+Date   : Aug 29 2024
+Time   : 11:30:57
+Host   : warxchampion
+PID    : 1013962
+I/O    : uncollated
+I/O    : uncollated
+I/O    : uncollated
+I/O    : uncollated
+Case   : /home/warxchampion/Desktop/pipeFlowReg/case5_Steady_rad_sir2_parallel
+nProcs : 1
+Case   : /home/warxchampion/Desktop/pipeFlowReg/case5_Steady_rad_sir2_parallel
+nProcs : 1
+Case   : /home/warxchampion/Desktop/pipeFlowReg/case5_Steady_rad_sir2_parallel
+nProcs : 1
+Case   : /home/warxchampion/Desktop/pipeFlowReg/case5_Steady_rad_sir2_parallel
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create time
+
+Create time
+
+Create time
+
+Create fluid mesh for region zonetwo for time = 0
+
+Create fluid mesh for region zonetwo for time = 0
+
+Create fluid mesh for region zonetwo for time = 0
+
+Create fluid mesh for region zonetwo for time = 0
+
+Create fluid mesh for region zoneone for time = 0
+
+Create fluid mesh for region zoneone for time = 0
+
+Create fluid mesh for region zoneone for time = 0
+
+Create fluid mesh for region zoneone for time = 0
+
+*** Reading fluid mesh thermophysical properties for region zonetwo
+
+    Adding to thermoFluid
+
+*** Reading fluid mesh thermophysical properties for region zonetwo
+
+    Adding to thermoFluid
+
+*** Reading fluid mesh thermophysical properties for region zonetwo
+
+    Adding to thermoFluid
+
+*** Reading fluid mesh thermophysical properties for region zonetwo
+
+    Adding to thermoFluid
+
+Selecting thermodynamics package 
+{
+Selecting thermodynamics package 
+{
+Selecting thermodynamics package 
+{
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+    energy          sensibleEnthalpy;
+}
+
+}
+
+    energy          sensibleEnthalpy;
+}
+
+}
+
+    Adding to rhoFluid
+
+    Adding to rhoFluid
+
+    Adding to rhoFluid
+
+    Adding to UFluid
+
+    Adding to rhoFluid
+    Adding to UFluid
+
+    Adding to UFluid
+
+
+    Adding to UFluid
+
+    Adding to phiFluid
+
+    Adding to phiFluid
+
+    Adding to phiFluid
+
+    Adding to phiFluid
+
+    Adding to hRefFluid
+
+    Adding to hRefFluid
+
+    Adding to ghFluid
+
+    Adding to ghFluid
+
+    Adding to hRefFluid
+    Adding to hRefFluid
+
+
+    Adding to ghFluid
+
+    Adding to ghFluid
+
+    Adding to ghfFluid
+
+    Adding to ghfFluid
+
+    Adding to ghfFluid
+
+    Adding to ghfFluid
+
+    Adding to turbulence
+
+    Adding to turbulence
+
+    Adding to turbulence
+
+    Adding to turbulence
+
+Selecting turbulence model type laminar
+Selecting turbulence model type laminar
+Selecting turbulence model type laminar
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Selecting laminar stress model Stokes
+Selecting laminar stress model Stokes
+Selecting laminar stress model Stokes
+Selecting radiationModel fvDOM
+Selecting radiationModel fvDOM
+Selecting radiationModel fvDOM
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting scatterModel none
+Selecting scatterModel none
+Selecting scatterModel none
+Selecting scatterModel none
+Selecting sootModel none
+Selecting sootModel none
+Selecting sootModel none
+Selecting sootModel none
+3
+3
+3
+3
+fvDOM : Allocated 96 rays with average orientation:
+	I0 : dAve : 	(0.00590069 0.0599108 0.0736311)
+	I1 : dAve : 	(0.0174753 0.0576084 0.0736311)
+	I2 : dAve : 	(0.0283784 0.0530922 0.0736311)
+	I3 : dAve : 	(0.0381909 0.0465357 0.0736311)
+	I4 : dAve : 	(0.0465357 0.0381909 0.0736311)
+	I5 : dAve : 	(0.0530922 0.0283784 0.0736311)
+	I6 : dAve : 	(0.0576084 0.0174753 0.0736311)
+	I7 : dAve : 	(0.0599108 0.00590069 0.0736311)
+	I8 : dAve : 	(0.0599108 -0.00590069 0.0736311)
+	I9 : dAve : 	(0.0576084 -0.0174753 0.0736311)
+	I10 : dAve : 	(0.0530922 -0.0283784 0.0736311)
+	I11 : dAve : 	(0.0465357 -0.0381909 0.0736311)
+	I12 : dAve : 	(0.0381909 -0.0465357 0.0736311)
+	I13 : dAve : 	(0.0283784 -0.0530922 0.0736311)
+	I14 : dAve : 	(0.0174753 -0.0576084 0.0736311)
+	I15 : dAve : 	(0.00590069 -0.0599108 0.0736311)
+	I16 : dAve : 	(-0.00590069 -0.0599108 0.0736311)
+	I17 : dAve : 	(-0.0174753 -0.0576084 0.0736311)
+	I18 : dAve : 	(-0.0283784 -0.0530922 0.0736311)
+	I19 : dAve : 	(-0.0381909 -0.0465357 0.0736311)
+	I20 : dAve : 	(-0.0465357 -0.0381909 0.0736311)
+	I21 : dAve : 	(-0.0530922 -0.0283784 0.0736311)
+	I22 : dAve : 	(-0.0576084 -0.0174753 0.0736311)
+	I23 : dAve : 	(-0.0599108 -0.00590069 0.0736311)
+	I24 : dAve : 	(-0.0599108 0.00590069 0.0736311)
+	I25 : dAve : 	(-0.0576084 0.0174753 0.0736311)
+	I26 : dAve : 	(-0.0530922 0.0283784 0.0736311)
+	I27 : dAve : 	(-0.0465357 0.0381909 0.0736311)
+	I28 : dAve : 	(-0.0381909 0.0465357 0.0736311)
+	I29 : dAve : 	(-0.0283784 0.0530922 0.0736311)
+	I30 : dAve : 	(-0.0174753 0.0576084 0.0736311)
+	I31 : dAve : 	(-0.00590069 0.0599108 0.0736311)
+	I32 : dAve : 	(0.018381 0.186626 1.04122e-17)
+	I33 : dAve : 	(0.0544367 0.179454 1.04122e-17)
+	I34 : dAve : 	(0.0884004 0.165385 1.04122e-17)
+	I35 : dAve : 	(0.118967 0.144962 1.04122e-17)
+	I36 : dAve : 	(0.144962 0.118967 1.04122e-17)
+	I37 : dAve : 	(0.165385 0.0884004 1.04122e-17)
+	I38 : dAve : 	(0.179454 0.0544367 1.04122e-17)
+	I39 : dAve : 	(0.186626 0.018381 1.04122e-17)
+	I40 : dAve : 	(0.186626 -0.018381 1.04122e-17)
+	I41 : dAve : 	(0.179454 -0.0544367 1.04122e-17)
+	I42 : dAve : 	(0.165385 -0.0884004 1.04122e-17)
+	I43 : dAve : 	(0.144962 -0.118967 1.04122e-17)
+	I44 : dAve : 	(0.118967 -0.144962 1.04122e-17)
+	I45 : dAve : 	(0.0884004 -0.165385 1.04122e-17)
+	I46 : dAve : 	(0.0544367 -0.179454 1.04122e-17)
+	I47 : dAve : 	(0.018381 -0.186626 1.04122e-17)
+	I48 : dAve : 	(-0.018381 -0.186626 1.04122e-17)
+	I49 : dAve : 	(-0.0544367 -0.179454 1.04122e-17)
+	I50 : dAve : 	(-0.0884004 -0.165385 1.04122e-17)
+	I51 : dAve : 	(-0.118967 -0.144962 1.04122e-17)
+	I52 : dAve : 	(-0.144962 -0.118967 1.04122e-17)
+	I53 : dAve : 	(-0.165385 -0.0884004 1.04122e-17)
+	I54 : dAve : 	(-0.179454 -0.0544367 1.04122e-17)
+	I55 : dAve : 	(-0.186626 -0.018381 1.04122e-17)
+	I56 : dAve : 	(-0.186626 0.018381 1.04122e-17)
+	I57 : dAve : 	(-0.179454 0.0544367 1.04122e-17)
+	I58 : dAve : 	(-0.165385 0.0884004 1.04122e-17)
+	I59 : dAve : 	(-0.144962 0.118967 1.04122e-17)
+	I60 : dAve : 	(-0.118967 0.144962 1.04122e-17)
+	I61 : dAve : 	(-0.0884004 0.165385 1.04122e-17)
+	I62 : dAve : 	(-0.0544367 0.179454 1.04122e-17)
+	I63 : dAve : 	(-0.018381 0.186626 1.04122e-17)
+	I64 : dAve : 	(0.00590069 0.0599108 -0.0736311)
+	I65 : dAve : 	(0.0174753 0.0576084 -0.0736311)
+	I66 : dAve : 	(0.0283784 0.0530922 -0.0736311)
+	I67 : dAve : 	(0.0381909 0.0465357 -0.0736311)
+	I68 : dAve : 	(0.0465357 0.0381909 -0.0736311)
+	I69 : dAve : 	(0.0530922 0.0283784 -0.0736311)
+	I70 : dAve : 	(0.0576084 0.0174753 -0.0736311)
+	I71 : dAve : 	(0.0599108 0.00590069 -0.0736311)
+	I72 : dAve : 	(0.0599108 -0.00590069 -0.0736311)
+	I73 : dAve : 	(0.0576084 -0.0174753 -0.0736311)
+	I74 : dAve : 	(0.0530922 -0.0283784 -0.0736311)
+	I75 : dAve : 	(0.0465357 -0.0381909 -0.0736311)
+	I76 : dAve : 	(0.0381909 -0.0465357 -0.0736311)
+	I77 : dAve : 	(0.0283784 -0.0530922 -0.0736311)
+	I78 : dAve : 	(0.0174753 -0.0576084 -0.0736311)
+	I79 : dAve : 	(0.00590069 -0.0599108 -0.0736311)
+	I80 : dAve : 	(-0.00590069 -0.0599108 -0.0736311)
+	I81 : dAve : 	(-0.0174753 -0.0576084 -0.0736311)
+fvDOM : Allocated 96 rays with average orientation:
+	I0 : dAve : 	(0.00590069 0.0599108 0.0736311)
+	I1 : dAve : 	(0.0174753 0.0576084 0.0736311)
+	I2 : dAve : 	(0.0283784 0.0530922 0.0736311)
+	I3 : dAve : 	(0.0381909 0.0465357 0.0736311)
+	I82 : dAve : 	(-0.0283784 -0.0530922 -0.0736311)
+	I83 : dAve : 	(-0.0381909 -0.0465357 -0.0736311)
+	I84 : dAve : 	(-0.0465357 -0.0381909 -0.0736311)
+	I4 : dAve : 	(0.0465357 0.0381909 0.0736311)
+	I5 : dAve : 	(0.0530922 0.0283784 0.0736311)
+	I85 : dAve : 	(-0.0530922 -0.0283784 -0.0736311)
+	I86 : dAve : 	(-0.0576084 -0.0174753 -0.0736311)
+	I87 : dAve : 	(-0.0599108 -0.00590069 -0.0736311)
+	I88 : dAve : 	(-0.0599108 0.00590069 -0.0736311)
+	I89 : dAve : 	(-0.0576084 0.0174753 -0.0736311)
+	I90 : dAve : 	(-0.0530922 0.0283784 -0.0736311)
+	I91 : dAve : 	(-0.0465357 0.0381909 -0.0736311)
+	I92 : dAve : 	(-0.0381909 0.0465357 -0.0736311)
+	I93 : dAve : 	(-0.0283784 0.0530922 -0.0736311)
+	I94 : dAve : 	(-0.0174753 0.0576084 -0.0736311)
+	I95 : dAve : 	(-0.00590069 0.0599108 -0.0736311)
+
+	I6 : dAve : 	(0.0576084 0.0174753 0.0736311)
+	I7 : dAve : 	(0.0599108 0.00590069 0.0736311)
+	I8 : dAve : 	(0.0599108 -0.00590069 0.0736311)
+	I9 : dAve : 	(0.0576084 -0.0174753 0.0736311)
+	I10 : dAve : 	(0.0530922 -0.0283784 0.0736311)
+	I11 : dAve : 	(0.0465357 -0.0381909 0.0736311)
+	I12 : dAve : 	(0.0381909 -0.0465357 0.0736311)
+	I13 : dAve : 	(0.0283784 -0.0530922 0.0736311)
+	I14 : dAve : 	(0.0174753 -0.0576084 0.0736311)
+	I15 : dAve : 	(0.00590069 -0.0599108 0.0736311)
+	I16 : dAve : 	(-0.00590069 -0.0599108 0.0736311)
+	I17 : dAve : 	(-0.0174753 -0.0576084 0.0736311)
+	I18 : dAve : 	(-0.0283784 -0.0530922 0.0736311)
+	I19 : dAve : 	(-0.0381909 -0.0465357 0.0736311)
+	I20 : dAve : 	(-0.0465357 -0.0381909 0.0736311)
+	I21 : dAve : 	(-0.0530922 -0.0283784 0.0736311)
+	I22 : dAve : 	(-0.0576084 -0.0174753 0.0736311)
+	I23 : dAve : 	(-0.0599108 -0.00590069 0.0736311)
+	I24 : dAve : 	(-0.0599108 0.00590069 0.0736311)
+	I25 : dAve : 	(-0.0576084 0.0174753 0.0736311)
+	I26 : dAve : 	(-0.0530922 0.0283784 0.0736311)
+	I27 : dAve : 	(-0.0465357 0.0381909 0.0736311)
+	I28 : dAve : 	(-0.0381909 0.0465357 0.0736311)
+	I29 : dAve : 	(-0.0283784 0.0530922 0.0736311)
+	I30 : dAve : 	(-0.0174753 0.0576084 0.0736311)
+	I31 : dAve : 	(-0.00590069 0.0599108 0.0736311)
+	I32 : dAve : 	(0.018381 0.186626 1.04122e-17)
+	I33 : dAve : 	(0.0544367 0.179454 1.04122e-17)
+	I34 : dAve : 	(0.0884004 0.165385 1.04122e-17)
+	I35 : dAve : 	(0.118967 0.144962 1.04122e-17)
+	I36 : dAve : 	(0.144962 0.118967 1.04122e-17)
+	I37 : dAve : 	(0.165385 0.0884004 1.04122e-17)
+	I38 : dAve : 	(0.179454 0.0544367 1.04122e-17)
+	I39 : dAve : 	(0.186626 0.018381 1.04122e-17)
+	I40 : dAve : 	(0.186626 -0.018381 1.04122e-17)
+	I41 : dAve : 	(0.179454 -0.0544367 1.04122e-17)
+	I42 : dAve : 	(0.165385 -0.0884004 1.04122e-17)
+	I43 : dAve : 	(0.144962 -0.118967 1.04122e-17)
+	I44 : dAve : 	(0.118967 -0.144962 1.04122e-17)
+	I45 : dAve : 	(0.0884004 -0.165385 1.04122e-17)
+	I46 : dAve : 	(0.0544367 -0.179454 1.04122e-17)
+	I47 : dAve : 	(0.018381 -0.186626 1.04122e-17)
+	I48 : dAve : 	(-0.018381 -0.186626 1.04122e-17)
+	I49 : dAve : 	(-0.0544367 -0.179454 1.04122e-17)
+	I50 : dAve : 	(-0.0884004 -0.165385 1.04122e-17)
+	I51 : dAve : 	(-0.118967 -0.144962 1.04122e-17)
+	I52 : dAve : 	(-0.144962 -0.118967 1.04122e-17)
+	I53 : dAve : 	(-0.165385 -0.0884004 1.04122e-17)
+	I54 : dAve : 	(-0.179454 -0.0544367 1.04122e-17)
+	I55 : dAve : 	(-0.186626 -0.018381 1.04122e-17)
+	I56 : dAve : 	(-0.186626 0.018381 1.04122e-17)
+	I57 : dAve : 	(-0.179454 0.0544367 1.04122e-17)
+	I58 : dAve : 	(-0.165385 0.0884004 1.04122e-17)
+	I59 : dAve : 	(-0.144962 0.118967 1.04122e-17)
+	I60 : dAve : 	(-0.118967 0.144962 1.04122e-17)
+	I61 : dAve : 	(-0.0884004 0.165385 1.04122e-17)
+	I62 : dAve : 	(-0.0544367 0.179454 1.04122e-17)
+	I63 : dAve : 	(-0.018381 0.186626 1.04122e-17)
+	I64 : dAve : 	(0.00590069 0.0599108 -0.0736311)
+	I65 : dAve : 	(0.0174753 0.0576084 -0.0736311)
+	I66 : dAve : 	(0.0283784 0.0530922 -0.0736311)
+	I67 : dAve : 	(0.0381909 0.0465357 -0.0736311)
+	I68 : dAve : 	(0.0465357 0.0381909 -0.0736311)
+	I69 : dAve : 	(0.0530922 0.0283784 -0.0736311)
+	I70 : dAve : 	(0.0576084 0.0174753 -0.0736311)
+	I71 : dAve : 	(0.0599108 0.00590069 -0.0736311)
+	I72 : dAve : 	(0.0599108 -0.00590069 -0.0736311)
+	I73 : dAve : 	(0.0576084 -0.0174753 -0.0736311)
+	I74 : dAve : 	(0.0530922 -0.0283784 -0.0736311)
+	I75 : dAve : 	(0.0465357 -0.0381909 -0.0736311)
+	I76 : dAve : 	(0.0381909 -0.0465357 -0.0736311)
+	I77 : dAve : 	(0.0283784 -0.0530922 -0.0736311)
+	I78 : dAve : 	(0.0174753 -0.0576084 -0.0736311)
+    Adding MRF
+
+	I79 : dAve : 	(0.00590069 -0.0599108 -0.0736311)
+	I80 : dAve : 	(-0.00590069 -0.0599108 -0.0736311)
+	I81 : dAve : 	(-0.0174753 -0.0576084 -0.0736311)
+	I82 : dAve : 	(-0.0283784 -0.0530922 -0.0736311)
+	I83 : dAve : 	(-0.0381909 -0.0465357 -0.0736311)
+	I84 : dAve : 	(-0.0465357 -0.0381909 -0.0736311)
+	I85 : dAve : 	(-0.0530922 -0.0283784 -0.0736311)
+	I86 : dAve : 	(-0.0576084 -0.0174753 -0.0736311)
+	I87 : dAve : 	(-0.0599108 -0.00590069 -0.0736311)
+	I88 : dAve : 	(-0.0599108 0.00590069 -0.0736311)
+	I89 : dAve : 	(-0.0576084 0.0174753 -0.0736311)
+	I90 : dAve : 	(-0.0530922 0.0283784 -0.0736311)
+	I91 : dAve : 	(-0.0465357 0.0381909 -0.0736311)
+	I92 : dAve : 	(-0.0381909 0.0465357 -0.0736311)
+	I93 : dAve : 	(-0.0283784 0.0530922 -0.0736311)
+	I94 : dAve : 	(-0.0174753 0.0576084 -0.0736311)
+	I95 : dAve : 	(-0.00590069 0.0599108 -0.0736311)
+
+No MRF models present
+
+    Adding fvOptions
+
+    Adding MRF
+
+No MRF models present
+
+    Adding fvOptions
+
+fvDOM : Allocated 96 rays with average orientation:
+	I0 : dAve : 	(0.00590069 0.0599108 0.0736311)
+	I1 : dAve : 	(0.0174753 0.0576084 0.0736311)
+	I2 : dAve : 	(0.0283784 0.0530922 0.0736311)
+	I3 : dAve : 	(0.0381909 0.0465357 0.0736311)
+	I4 : dAve : 	(0.0465357 0.0381909 0.0736311)
+	I5 : dAve : 	(0.0530922 0.0283784 0.0736311)
+	I6 : dAve : 	(0.0576084 0.0174753 0.0736311)
+	I7 : dAve : 	(0.0599108 0.00590069 0.0736311)
+	I8 : dAve : 	(0.0599108 -0.00590069 0.0736311)
+	I9 : dAve : 	(0.0576084 -0.0174753 0.0736311)
+	I10 : dAve : 	(0.0530922 -0.0283784 0.0736311)
+	I11 : dAve : 	(0.0465357 -0.0381909 0.0736311)
+	I12 : dAve : 	(0.0381909 -0.0465357 0.0736311)
+	I13 : dAve : 	(0.0283784 -0.0530922 0.0736311)
+	I14 : dAve : 	(0.0174753 -0.0576084 0.0736311)
+	I15 : dAve : 	(0.00590069 -0.0599108 0.0736311)
+	I16 : dAve : 	(-0.00590069 -0.0599108 0.0736311)
+	I17 : dAve : 	(-0.0174753 -0.0576084 0.0736311)
+	I18 : dAve : 	(-0.0283784 -0.0530922 0.0736311)
+	I19 : dAve : 	(-0.0381909 -0.0465357 0.0736311)
+	I20 : dAve : 	(-0.0465357 -0.0381909 0.0736311)
+	I21 : dAve : 	(-0.0530922 -0.0283784 0.0736311)
+	I22 : dAve : 	(-0.0576084 -0.0174753 0.0736311)
+	I23 : dAve : 	(-0.0599108 -0.00590069 0.0736311)
+	I24 : dAve : 	(-0.0599108 0.00590069 0.0736311)
+	I25 : dAve : 	(-0.0576084 0.0174753 0.0736311)
+	I26 : dAve : 	(-0.0530922 0.0283784 0.0736311)
+	I27 : dAve : 	(-0.0465357 0.0381909 0.0736311)
+	I28 : dAve : 	(-0.0381909 0.0465357 0.0736311)
+	I29 : dAve : 	(-0.0283784 0.0530922 0.0736311)
+	I30 : dAve : 	(-0.0174753 0.0576084 0.0736311)
+	I31 : dAve : 	(-0.00590069 0.0599108 0.0736311)
+	I32 : dAve : 	(0.018381 0.186626 1.04122e-17)
+	I33 : dAve : 	(0.0544367 0.179454 1.04122e-17)
+	I34 : dAve : 	(0.0884004 0.165385 1.04122e-17)
+	I35 : dAve : 	(0.118967 0.144962 1.04122e-17)
+	I36 : dAve : 	(0.144962 0.118967 1.04122e-17)
+	I37 : dAve : 	(0.165385 0.0884004 1.04122e-17)
+	I38 : dAve : 	(0.179454 0.0544367 1.04122e-17)
+	I39 : dAve : 	(0.186626 0.018381 1.04122e-17)
+	I40 : dAve : 	(0.186626 -0.018381 1.04122e-17)
+	I41 : dAve : 	(0.179454 -0.0544367 1.04122e-17)
+	I42 : dAve : 	(0.165385 -0.0884004 1.04122e-17)
+	I43 : dAve : 	(0.144962 -0.118967 1.04122e-17)
+	I44 : dAve : 	(0.118967 -0.144962 1.04122e-17)
+	I45 : dAve : 	(0.0884004 -0.165385 1.04122e-17)
+	I46 : dAve : 	(0.0544367 -0.179454 1.04122e-17)
+	I47 : dAve : 	(0.018381 -0.186626 1.04122e-17)
+	I48 : dAve : 	(-0.018381 -0.186626 1.04122e-17)
+	I49 : dAve : 	(-0.0544367 -0.179454 1.04122e-17)
+	I50 : dAve : 	(-0.0884004 -0.165385 1.04122e-17)
+	I51 : dAve : 	(-0.118967 -0.144962 1.04122e-17)
+	I52 : dAve : 	(-0.144962 -0.118967 1.04122e-17)
+*** Reading fluid mesh thermophysical properties for region zoneone
+
+    Adding to thermoFluid
+
+	I53 : dAve : 	(-0.165385 -0.0884004 1.04122e-17)
+	I54 : dAve : 	(-0.179454 -0.0544367 1.04122e-17)
+	I55 : dAve : 	(-0.186626 -0.018381 1.04122e-17)
+	I56 : dAve : 	(-0.186626 0.018381 1.04122e-17)
+	I57 : dAve : 	(-0.179454 0.0544367 1.04122e-17)
+	I58 : dAve : 	(-0.165385 0.0884004 1.04122e-17)
+	I59 : dAve : 	(-0.144962 0.118967 1.04122e-17)
+	I60 : dAve : 	(-0.118967 0.144962 1.04122e-17)
+	I61 : dAve : 	(-0.0884004 0.165385 1.04122e-17)
+	I62 : dAve : 	(-0.0544367 0.179454 1.04122e-17)
+	I63 : dAve : 	(-0.018381 0.186626 1.04122e-17)
+	I64 : dAve : 	(0.00590069 0.0599108 -0.0736311)
+	I65 : dAve : 	(0.0174753 0.0576084 -0.0736311)
+	I66 : dAve : 	(0.0283784 0.0530922 -0.0736311)
+	I67 : dAve : 	(0.0381909 0.0465357 -0.0736311)
+	I68 : dAve : 	(0.0465357 0.0381909 -0.0736311)
+	I69 : dAve : 	(0.0530922 0.0283784 -0.0736311)
+	I70 : dAve : 	(0.0576084 0.0174753 -0.0736311)
+	I71 : dAve : 	(0.0599108 0.00590069 -0.0736311)
+	I72 : dAve : 	(0.0599108 -0.00590069 -0.0736311)
+	I73 : dAve : 	(0.0576084 -0.0174753 -0.0736311)
+	I74 : dAve : 	(0.0530922 -0.0283784 -0.0736311)
+	I75 : dAve : 	(0.0465357 -0.0381909 -0.0736311)
+	I76 : dAve : 	(0.0381909 -0.0465357 -0.0736311)
+	I77 : dAve : 	(0.0283784 -0.0530922 -0.0736311)
+	I78 : dAve : 	(0.0174753 -0.0576084 -0.0736311)
+	I79 : dAve : 	(0.00590069 -0.0599108 -0.0736311)
+	I80 : dAve : 	(-0.00590069 -0.0599108 -0.0736311)
+	I81 : dAve : 	(-0.0174753 -0.0576084 -0.0736311)
+	I82 : dAve : 	(-0.0283784 -0.0530922 -0.0736311)
+	I83 : dAve : 	(-0.0381909 -0.0465357 -0.0736311)
+	I84 : dAve : 	(-0.0465357 -0.0381909 -0.0736311)
+	I85 : dAve : 	(-0.0530922 -0.0283784 -0.0736311)
+	I86 : dAve : 	(-0.0576084 -0.0174753 -0.0736311)
+	I87 : dAve : 	(-0.0599108 -0.00590069 -0.0736311)
+	I88 : dAve : 	(-0.0599108 0.00590069 -0.0736311)
+	I89 : dAve : 	(-0.0576084 0.0174753 -0.0736311)
+	I90 : dAve : 	(-0.0530922 0.0283784 -0.0736311)
+	I91 : dAve : 	(-0.0465357 0.0381909 -0.0736311)
+	I92 : dAve : 	(-0.0381909 0.0465357 -0.0736311)
+	I93 : dAve : 	(-0.0283784 0.0530922 -0.0736311)
+	I94 : dAve : 	(-0.0174753 0.0576084 -0.0736311)
+	I95 : dAve : 	(-0.00590069 0.0599108 -0.0736311)
+
+*** Reading fluid mesh thermophysical properties for region zoneone
+
+    Adding to thermoFluid
+
+Selecting thermodynamics package 
+{
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+    Adding MRF
+
+No MRF models present
+
+    Adding fvOptions
+
+*** Reading fluid mesh thermophysical properties for region zoneone
+
+    Adding to thermoFluid
+
+fvDOM : Allocated 96 rays with average orientation:
+	I0 : dAve : 	(0.00590069 0.0599108 0.0736311)
+	I1 : dAve : 	(0.0174753 0.0576084 0.0736311)
+	I2 : dAve : 	(0.0283784 0.0530922 0.0736311)
+	I3 : dAve : 	(0.0381909 0.0465357 0.0736311)
+	I4 : dAve : 	(0.0465357 0.0381909 0.0736311)
+	I5 : dAve : 	(0.0530922 0.0283784 0.0736311)
+	I6 : dAve : 	(0.0576084 0.0174753 0.0736311)
+	I7 : dAve : 	(0.0599108 0.00590069 0.0736311)
+	I8 : dAve : 	(0.0599108 -0.00590069 0.0736311)
+	I9 : dAve : 	(0.0576084 -0.0174753 0.0736311)
+	I10 : dAve : 	(0.0530922 -0.0283784 0.0736311)
+	I11 : dAve : 	(0.0465357 -0.0381909 0.0736311)
+	I12 : dAve : 	(0.0381909 -0.0465357 0.0736311)
+	I13 : dAve : 	(0.0283784 -0.0530922 0.0736311)
+	I14 : dAve : 	(0.0174753 -0.0576084 0.0736311)
+	I15 : dAve : 	(0.00590069 -0.0599108 0.0736311)
+	I16 : dAve : 	(-0.00590069 -0.0599108 0.0736311)
+	I17 : dAve : 	(-0.0174753 -0.0576084 0.0736311)
+	I18 : dAve : 	(-0.0283784 -0.0530922 0.0736311)
+	I19 : dAve : 	(-0.0381909 -0.0465357 0.0736311)
+	I20 : dAve : 	(-0.0465357 -0.0381909 0.0736311)
+	I21 : dAve : 	(-0.0530922 -0.0283784 0.0736311)
+	I22 : dAve : 	(-0.0576084 -0.0174753 0.0736311)
+	I23 : dAve : 	(-0.0599108 -0.00590069 0.0736311)
+	I24 : dAve : 	(-0.0599108 0.00590069 0.0736311)
+	I25 : dAve : 	(-0.0576084 0.0174753 0.0736311)
+	I26 : dAve : 	(-0.0530922 0.0283784 0.0736311)
+	I27 : dAve : 	(-0.0465357 0.0381909 0.0736311)
+	I28 : dAve : 	(-0.0381909 0.0465357 0.0736311)
+	I29 : dAve : 	(-0.0283784 0.0530922 0.0736311)
+	I30 : dAve : 	(-0.0174753 0.0576084 0.0736311)
+	I31 : dAve : 	(-0.00590069 0.0599108 0.0736311)
+	I32 : dAve : 	(0.018381 0.186626 1.04122e-17)
+	I33 : dAve : 	(0.0544367 0.179454 1.04122e-17)
+	I34 : dAve : 	(0.0884004 0.165385 1.04122e-17)
+	I35 : dAve : 	(0.118967 0.144962 1.04122e-17)
+	I36 : dAve : 	(0.144962 0.118967 1.04122e-17)
+	I37 : dAve : 	(0.165385 0.0884004 1.04122e-17)
+	I38 : dAve : 	(0.179454 0.0544367 1.04122e-17)
+	I39 : dAve : 	(0.186626 0.018381 1.04122e-17)
+	I40 : dAve : 	(0.186626 -0.018381 1.04122e-17)
+	I41 : dAve : 	(0.179454 -0.0544367 1.04122e-17)
+	I42 : dAve : 	(0.165385 -0.0884004 1.04122e-17)
+	I43 : dAve : 	(0.144962 -0.118967 1.04122e-17)
+	I44 : dAve : 	(0.118967 -0.144962 1.04122e-17)
+	I45 : dAve : 	(0.0884004 -0.165385 1.04122e-17)
+	I46 : dAve : 	(0.0544367 -0.179454 1.04122e-17)
+Selecting thermodynamics package 
+{
+	I47 : dAve : 	(0.018381 -0.186626 1.04122e-17)
+	I48 : dAve : 	(-0.018381 -0.186626 1.04122e-17)
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+	I49 : dAve : 	(-0.0544367 -0.179454 1.04122e-17)
+	I50 : dAve : 	(-0.0884004 -0.165385 1.04122e-17)
+	I51 : dAve : 	(-0.118967 -0.144962 1.04122e-17)
+	I52 : dAve : 	(-0.144962 -0.118967 1.04122e-17)
+
+	I53 : dAve : 	(-0.165385 -0.0884004 1.04122e-17)
+	I54 : dAve : 	(-0.179454 -0.0544367 1.04122e-17)
+	I55 : dAve : 	(-0.186626 -0.018381 1.04122e-17)
+	I56 : dAve : 	(-0.186626 0.018381 1.04122e-17)
+	I57 : dAve : 	(-0.179454 0.0544367 1.04122e-17)
+	I58 : dAve : 	(-0.165385 0.0884004 1.04122e-17)
+	I59 : dAve : 	(-0.144962 0.118967 1.04122e-17)
+	I60 : dAve : 	(-0.118967 0.144962 1.04122e-17)
+	I61 : dAve : 	(-0.0884004 0.165385 1.04122e-17)
+	I62 : dAve : 	(-0.0544367 0.179454 1.04122e-17)
+	I63 : dAve : 	(-0.018381 0.186626 1.04122e-17)
+	I64 : dAve : 	(0.00590069 0.0599108 -0.0736311)
+	I65 : dAve : 	(0.0174753 0.0576084 -0.0736311)
+	I66 : dAve : 	(0.0283784 0.0530922 -0.0736311)
+	I67 : dAve : 	(0.0381909 0.0465357 -0.0736311)
+	I68 : dAve : 	(0.0465357 0.0381909 -0.0736311)
+	I69 : dAve : 	(0.0530922 0.0283784 -0.0736311)
+	I70 : dAve : 	(0.0576084 0.0174753 -0.0736311)
+	I71 : dAve : 	(0.0599108 0.00590069 -0.0736311)
+	I72 : dAve : 	(0.0599108 -0.00590069 -0.0736311)
+	I73 : dAve : 	(0.0576084 -0.0174753 -0.0736311)
+	I74 : dAve : 	(0.0530922 -0.0283784 -0.0736311)
+	I75 : dAve : 	(0.0465357 -0.0381909 -0.0736311)
+	I76 : dAve : 	(0.0381909 -0.0465357 -0.0736311)
+	I77 : dAve : 	(0.0283784 -0.0530922 -0.0736311)
+	I78 : dAve : 	(0.0174753 -0.0576084 -0.0736311)
+	I79 : dAve : 	(0.00590069 -0.0599108 -0.0736311)
+	I80 : dAve : 	(-0.00590069 -0.0599108 -0.0736311)
+	I81 : dAve : 	(-0.0174753 -0.0576084 -0.0736311)
+	I82 : dAve : 	(-0.0283784 -0.0530922 -0.0736311)
+	I83 : dAve : 	(-0.0381909 -0.0465357 -0.0736311)
+	I84 : dAve : 	(-0.0465357 -0.0381909 -0.0736311)
+	I85 : dAve : 	(-0.0530922 -0.0283784 -0.0736311)
+	I86 : dAve : 	(-0.0576084 -0.0174753 -0.0736311)
+	I87 : dAve : 	(-0.0599108 -0.00590069 -0.0736311)
+	I88 : dAve : 	(-0.0599108 0.00590069 -0.0736311)
+	I89 : dAve : 	(-0.0576084 0.0174753 -0.0736311)
+	I90 : dAve : 	(-0.0530922 0.0283784 -0.0736311)
+	I91 : dAve : 	(-0.0465357 0.0381909 -0.0736311)
+	I92 : dAve : 	(-0.0381909 0.0465357 -0.0736311)
+	I93 : dAve : 	(-0.0283784 0.0530922 -0.0736311)
+	I94 : dAve : 	(-0.0174753 0.0576084 -0.0736311)
+	I95 : dAve : 	(-0.00590069 0.0599108 -0.0736311)
+
+    Adding MRF
+
+No MRF models present
+
+    Adding fvOptions
+
+*** Reading fluid mesh thermophysical properties for region zoneone
+
+    Adding to thermoFluid
+
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState rhoConst;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+    Adding to rhoFluid
+
+    Adding to rhoFluid
+
+    Adding to UFluid
+
+    Adding to UFluid
+
+    Adding to rhoFluid
+
+    Adding to UFluid
+
+    Adding to phiFluid
+
+    Adding to phiFluid
+
+    Adding to rhoFluid
+
+    Adding to UFluid
+
+    Adding to phiFluid
+
+    Adding to hRefFluid
+
+    Adding to hRefFluid
+
+    Adding to ghFluid
+
+    Adding to ghFluid
+
+    Adding to ghfFluid
+
+    Adding to ghfFluid
+
+    Adding to phiFluid
+
+    Adding to turbulence
+
+    Adding to turbulence
+
+Selecting turbulence model type laminar
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Selecting laminar stress model Stokes
+    Adding to hRefFluid
+
+    Adding to ghFluid
+
+    Adding to ghfFluid
+
+    Adding to turbulence
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+    Adding to hRefFluid
+
+    Adding to ghFluid
+
+    Adding to ghfFluid
+
+    Adding to turbulence
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Selecting radiationModel fvDOM
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting scatterModel none
+Selecting scatterModel none
+Selecting sootModel none
+Selecting sootModel none
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting scatterModel none
+Selecting sootModel none
+3
+3
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel constantAbsorptionEmission
+Selecting scatterModel none
+Selecting sootModel none
+3
+3
+fvDOM : Allocated 72 rays with average orientation:
+	I0 : dAve : 	(0.0104639 0.0794814 0.0981748)
+	I1 : dAve : 	(0.0306787 0.0740648 0.0981748)
+	I2 : dAve : 	(0.0488027 0.0636009 0.0981748)
+	I3 : dAve : 	(0.0636009 0.0488027 0.0981748)
+	I4 : dAve : 	(0.0740648 0.0306787 0.0981748)
+	I5 : dAve : 	(0.0794814 0.0104639 0.0981748)
+	I6 : dAve : 	(0.0794814 -0.0104639 0.0981748)
+	I7 : dAve : 	(0.0740648 -0.0306787 0.0981748)
+	I8 : dAve : 	(0.0636009 -0.0488027 0.0981748)
+	I9 : dAve : 	(0.0488027 -0.0636009 0.0981748)
+	I10 : dAve : 	(0.0306787 -0.0740648 0.0981748)
+	I11 : dAve : 	(0.0104639 -0.0794814 0.0981748)
+	I12 : dAve : 	(-0.0104639 -0.0794814 0.0981748)
+	I13 : dAve : 	(-0.0306787 -0.0740648 0.0981748)
+	I14 : dAve : 	(-0.0488027 -0.0636009 0.0981748)
+	I15 : dAve : 	(-0.0636009 -0.0488027 0.0981748)
+	I16 : dAve : 	(-0.0740648 -0.0306787 0.0981748)
+	I17 : dAve : 	(-0.0794814 -0.0104639 0.0981748)
+fvDOM : Allocated 72 rays with average orientation:
+	I0 : dAve : 	(0.0104639 0.0794814 0.0981748)
+	I1 : dAve : 	(0.0306787 0.0740648 0.0981748)
+	I2 : dAve : 	(0.0488027 0.0636009 0.0981748)
+	I3 : dAve : 	(0.0636009 0.0488027 0.0981748)
+	I4 : dAve : 	(0.0740648 0.0306787 0.0981748)
+	I5 : dAve : 	(0.0794814 0.0104639 0.0981748)
+	I6 : dAve : 	(0.0794814 -0.0104639 0.0981748)
+	I7 : dAve : 	(0.0740648 -0.0306787 0.0981748)
+	I8 : dAve : 	(0.0636009 -0.0488027 0.0981748)
+	I9 : dAve : 	(0.0488027 -0.0636009 0.0981748)
+	I10 : dAve : 	(0.0306787 -0.0740648 0.0981748)
+	I11 : dAve : 	(0.0104639 -0.0794814 0.0981748)
+	I12 : dAve : 	(-0.0104639 -0.0794814 0.0981748)
+	I13 : dAve : 	(-0.0306787 -0.0740648 0.0981748)
+	I14 : dAve : 	(-0.0488027 -0.0636009 0.0981748)
+	I15 : dAve : 	(-0.0636009 -0.0488027 0.0981748)
+	I16 : dAve : 	(-0.0740648 -0.0306787 0.0981748)
+	I17 : dAve : 	(-0.0794814 -0.0104639 0.0981748)
+	I18 : dAve : 	(-0.0794814 0.0104639 0.0981748)
+	I19 : dAve : 	(-0.0740648 0.0306787 0.0981748)
+	I20 : dAve : 	(-0.0636009 0.0488027 0.0981748)
+	I21 : dAve : 	(-0.0488027 0.0636009 0.0981748)
+	I18 : dAve : 	(-0.0794814 0.0104639 0.0981748)
+	I19 : dAve : 	(-0.0740648 0.0306787 0.0981748)
+	I20 : dAve : 	(-0.0636009 0.0488027 0.0981748)
+	I21 : dAve : 	(-0.0488027 0.0636009 0.0981748)
+	I22 : dAve : 	(-0.0306787 0.0740648 0.0981748)
+	I23 : dAve : 	(-0.0104639 0.0794814 0.0981748)
+	I22 : dAve : 	(-0.0306787 0.0740648 0.0981748)
+	I23 : dAve : 	(-0.0104639 0.0794814 0.0981748)
+	I24 : dAve : 	(0.0325957 0.247589 1.38829e-17)
+	I24 : dAve : 	(0.0325957 0.247589 1.38829e-17)
+	I25 : dAve : 	(0.0955659 0.230716 1.38829e-17)
+	I26 : dAve : 	(0.152023 0.198121 1.38829e-17)
+	I27 : dAve : 	(0.198121 0.152023 1.38829e-17)
+	I28 : dAve : 	(0.230716 0.0955659 1.38829e-17)
+	I29 : dAve : 	(0.247589 0.0325957 1.38829e-17)
+	I30 : dAve : 	(0.247589 -0.0325957 1.38829e-17)
+	I31 : dAve : 	(0.230716 -0.0955659 1.38829e-17)
+	I32 : dAve : 	(0.198121 -0.152023 1.38829e-17)
+	I33 : dAve : 	(0.152023 -0.198121 1.38829e-17)
+	I34 : dAve : 	(0.0955659 -0.230716 1.38829e-17)
+	I35 : dAve : 	(0.0325957 -0.247589 1.38829e-17)
+	I36 : dAve : 	(-0.0325957 -0.247589 1.38829e-17)
+	I37 : dAve : 	(-0.0955659 -0.230716 1.38829e-17)
+	I38 : dAve : 	(-0.152023 -0.198121 1.38829e-17)
+	I39 : dAve : 	(-0.198121 -0.152023 1.38829e-17)
+	I40 : dAve : 	(-0.230716 -0.0955659 1.38829e-17)
+	I41 : dAve : 	(-0.247589 -0.0325957 1.38829e-17)
+	I42 : dAve : 	(-0.247589 0.0325957 1.38829e-17)
+	I25 : dAve : 	(0.0955659 0.230716 1.38829e-17)
+	I26 : dAve : 	(0.152023 0.198121 1.38829e-17)
+	I27 : dAve : 	(0.198121 0.152023 1.38829e-17)
+	I28 : dAve : 	(0.230716 0.0955659 1.38829e-17)
+	I29 : dAve : 	(0.247589 0.0325957 1.38829e-17)
+	I30 : dAve : 	(0.247589 -0.0325957 1.38829e-17)
+	I31 : dAve : 	(0.230716 -0.0955659 1.38829e-17)
+	I32 : dAve : 	(0.198121 -0.152023 1.38829e-17)
+	I33 : dAve : 	(0.152023 -0.198121 1.38829e-17)
+	I34 : dAve : 	(0.0955659 -0.230716 1.38829e-17)
+	I35 : dAve : 	(0.0325957 -0.247589 1.38829e-17)
+	I36 : dAve : 	(-0.0325957 -0.247589 1.38829e-17)
+	I37 : dAve : 	(-0.0955659 -0.230716 1.38829e-17)
+	I38 : dAve : 	(-0.152023 -0.198121 1.38829e-17)
+	I39 : dAve : 	(-0.198121 -0.152023 1.38829e-17)
+	I40 : dAve : 	(-0.230716 -0.0955659 1.38829e-17)
+	I41 : dAve : 	(-0.247589 -0.0325957 1.38829e-17)
+	I42 : dAve : 	(-0.247589 0.0325957 1.38829e-17)
+	I43 : dAve : 	(-0.230716 0.0955659 1.38829e-17)
+	I44 : dAve : 	(-0.198121 0.152023 1.38829e-17)
+	I45 : dAve : 	(-0.152023 0.198121 1.38829e-17)
+	I46 : dAve : 	(-0.0955659 0.230716 1.38829e-17)
+	I47 : dAve : 	(-0.0325957 0.247589 1.38829e-17)
+	I48 : dAve : 	(0.0104639 0.0794814 -0.0981748)
+	I49 : dAve : 	(0.0306787 0.0740648 -0.0981748)
+	I50 : dAve : 	(0.0488027 0.0636009 -0.0981748)
+	I51 : dAve : 	(0.0636009 0.0488027 -0.0981748)
+	I52 : dAve : 	(0.0740648 0.0306787 -0.0981748)
+	I43 : dAve : 	(-0.230716 0.0955659 1.38829e-17)
+	I44 : dAve : 	(-0.198121 0.152023 1.38829e-17)
+	I45 : dAve : 	(-0.152023 0.198121 1.38829e-17)
+	I46 : dAve : 	(-0.0955659 0.230716 1.38829e-17)
+	I47 : dAve : 	(-0.0325957 0.247589 1.38829e-17)
+	I48 : dAve : 	(0.0104639 0.0794814 -0.0981748)
+	I49 : dAve : 	(0.0306787 0.0740648 -0.0981748)
+	I50 : dAve : 	(0.0488027 0.0636009 -0.0981748)
+	I51 : dAve : 	(0.0636009 0.0488027 -0.0981748)
+	I52 : dAve : 	(0.0740648 0.0306787 -0.0981748)
+	I53 : dAve : 	(0.0794814 0.0104639 -0.0981748)
+	I54 : dAve : 	(0.0794814 -0.0104639 -0.0981748)
+	I53 : dAve : 	(0.0794814 0.0104639 -0.0981748)
+	I54 : dAve : 	(0.0794814 -0.0104639 -0.0981748)
+	I55 : dAve : 	(0.0740648 -0.0306787 -0.0981748)
+	I55 : dAve : 	(0.0740648 -0.0306787 -0.0981748)
+	I56 : dAve : 	(0.0636009 -0.0488027 -0.0981748)
+	I57 : dAve : 	(0.0488027 -0.0636009 -0.0981748)
+	I58 : dAve : 	(0.0306787 -0.0740648 -0.0981748)
+	I56 : dAve : 	(0.0636009 -0.0488027 -0.0981748)
+	I57 : dAve : 	(0.0488027 -0.0636009 -0.0981748)
+	I58 : dAve : 	(0.0306787 -0.0740648 -0.0981748)
+	I59 : dAve : 	(0.0104639 -0.0794814 -0.0981748)
+	I59 : dAve : 	(0.0104639 -0.0794814 -0.0981748)
+	I60 : dAve : 	(-0.0104639 -0.0794814 -0.0981748)
+	I61 : dAve : 	(-0.0306787 -0.0740648 -0.0981748)
+	I60 : dAve : 	(-0.0104639 -0.0794814 -0.0981748)
+	I61 : dAve : 	(-0.0306787 -0.0740648 -0.0981748)
+	I62 : dAve : 	(-0.0488027 -0.0636009 -0.0981748)
+	I62 : dAve : 	(-0.0488027 -0.0636009 -0.0981748)
+	I63 : dAve : 	(-0.0636009 -0.0488027 -0.0981748)
+	I64 : dAve : 	(-0.0740648 -0.0306787 -0.0981748)
+	I63 : dAve : 	(-0.0636009 -0.0488027 -0.0981748)
+	I64 : dAve : 	(-0.0740648 -0.0306787 -0.0981748)
+	I65 : dAve : 	(-0.0794814 -0.0104639 -0.0981748)
+	I66 : dAve : 	(-0.0794814 0.0104639 -0.0981748)
+	I67 : dAve : 	(-0.0740648 0.0306787 -0.0981748)
+	I65 : dAve : 	(-0.0794814 -0.0104639 -0.0981748)
+	I66 : dAve : 	(-0.0794814 0.0104639 -0.0981748)
+	I67 : dAve : 	(-0.0740648 0.0306787 -0.0981748)
+	I68 : dAve : 	(-0.0636009 0.0488027 -0.0981748)
+	I68 : dAve : 	(-0.0636009 0.0488027 -0.0981748)
+	I69 : dAve : 	(-0.0488027 0.0636009 -0.0981748)
+	I70 : dAve : 	(-0.0306787 0.0740648 -0.0981748)
+	I71 : dAve : 	(-0.0104639 0.0794814 -0.0981748)
+
+	I69 : dAve : 	(-0.0488027 0.0636009 -0.0981748)
+	I70 : dAve : 	(-0.0306787 0.0740648 -0.0981748)
+	I71 : dAve : 	(-0.0104639 0.0794814 -0.0981748)
+
+    Adding MRF
+
+    Adding MRF
+
+No MRF models present
+
+No MRF models present
+
+    Adding fvOptions
+
+    Adding fvOptions
+
+fvDOM : Allocated 72 rays with average orientation:
+	I0 : dAve : 	(0.0104639 0.0794814 0.0981748)
+	I1 : dAve : 	(0.0306787 0.0740648 0.0981748)
+	I2 : dAve : 	(0.0488027 0.0636009 0.0981748)
+	I3 : dAve : 	(0.0636009 0.0488027 0.0981748)
+	I4 : dAve : 	(0.0740648 0.0306787 0.0981748)
+	I5 : dAve : 	(0.0794814 0.0104639 0.0981748)
+	I6 : dAve : 	(0.0794814 -0.0104639 0.0981748)
+	I7 : dAve : 	(0.0740648 -0.0306787 0.0981748)
+	I8 : dAve : 	(0.0636009 -0.0488027 0.0981748)
+	I9 : dAve : 	(0.0488027 -0.0636009 0.0981748)
+	I10 : dAve : 	(0.0306787 -0.0740648 0.0981748)
+	I11 : dAve : 	(0.0104639 -0.0794814 0.0981748)
+	I12 : dAve : 	(-0.0104639 -0.0794814 0.0981748)
+	I13 : dAve : 	(-0.0306787 -0.0740648 0.0981748)
+	I14 : dAve : 	(-0.0488027 -0.0636009 0.0981748)
+	I15 : dAve : 	(-0.0636009 -0.0488027 0.0981748)
+	I16 : dAve : 	(-0.0740648 -0.0306787 0.0981748)
+	I17 : dAve : 	(-0.0794814 -0.0104639 0.0981748)
+	I18 : dAve : 	(-0.0794814 0.0104639 0.0981748)
+	I19 : dAve : 	(-0.0740648 0.0306787 0.0981748)
+	I20 : dAve : 	(-0.0636009 0.0488027 0.0981748)
+	I21 : dAve : 	(-0.0488027 0.0636009 0.0981748)
+	I22 : dAve : 	(-0.0306787 0.0740648 0.0981748)
+	I23 : dAve : 	(-0.0104639 0.0794814 0.0981748)
+	I24 : dAve : 	(0.0325957 0.247589 1.38829e-17)
+	I25 : dAve : 	(0.0955659 0.230716 1.38829e-17)
+	I26 : dAve : 	(0.152023 0.198121 1.38829e-17)
+	I27 : dAve : 	(0.198121 0.152023 1.38829e-17)
+	I28 : dAve : 	(0.230716 0.0955659 1.38829e-17)
+	I29 : dAve : 	(0.247589 0.0325957 1.38829e-17)
+	I30 : dAve : 	(0.247589 -0.0325957 1.38829e-17)
+	I31 : dAve : 	(0.230716 -0.0955659 1.38829e-17)
+	I32 : dAve : 	(0.198121 -0.152023 1.38829e-17)
+	I33 : dAve : 	(0.152023 -0.198121 1.38829e-17)
+	I34 : dAve : 	(0.0955659 -0.230716 1.38829e-17)
+	I35 : dAve : 	(0.0325957 -0.247589 1.38829e-17)
+	I36 : dAve : 	(-0.0325957 -0.247589 1.38829e-17)
+	I37 : dAve : 	(-0.0955659 -0.230716 1.38829e-17)
+	I38 : dAve : 	(-0.152023 -0.198121 1.38829e-17)
+	I39 : dAve : 	(-0.198121 -0.152023 1.38829e-17)
+	I40 : dAve : 	(-0.230716 -0.0955659 1.38829e-17)
+	I41 : dAve : 	(-0.247589 -0.0325957 1.38829e-17)
+	I42 : dAve : 	(-0.247589 0.0325957 1.38829e-17)
+	I43 : dAve : 	(-0.230716 0.0955659 1.38829e-17)
+	I44 : dAve : 	(-0.198121 0.152023 1.38829e-17)
+	I45 : dAve : 	(-0.152023 0.198121 1.38829e-17)
+	I46 : dAve : 	(-0.0955659 0.230716 1.38829e-17)
+	I47 : dAve : 	(-0.0325957 0.247589 1.38829e-17)
+	I48 : dAve : 	(0.0104639 0.0794814 -0.0981748)
+	I49 : dAve : 	(0.0306787 0.0740648 -0.0981748)
+	I50 : dAve : 	(0.0488027 0.0636009 -0.0981748)
+	I51 : dAve : 	(0.0636009 0.0488027 -0.0981748)
+	I52 : dAve : 	(0.0740648 0.0306787 -0.0981748)
+	I53 : dAve : 	(0.0794814 0.0104639 -0.0981748)
+	I54 : dAve : 	(0.0794814 -0.0104639 -0.0981748)
+	I55 : dAve : 	(0.0740648 -0.0306787 -0.0981748)
+	I56 : dAve : 	(0.0636009 -0.0488027 -0.0981748)
+	I57 : dAve : 	(0.0488027 -0.0636009 -0.0981748)
+	I58 : dAve : 	(0.0306787 -0.0740648 -0.0981748)
+	I59 : dAve : 	(0.0104639 -0.0794814 -0.0981748)
+	I60 : dAve : 	(-0.0104639 -0.0794814 -0.0981748)
+	I61 : dAve : 	(-0.0306787 -0.0740648 -0.0981748)
+	I62 : dAve : 	(-0.0488027 -0.0636009 -0.0981748)
+	I63 : dAve : 	(-0.0636009 -0.0488027 -0.0981748)
+	I64 : dAve : 	(-0.0740648 -0.0306787 -0.0981748)
+	I65 : dAve : 	(-0.0794814 -0.0104639 -0.0981748)
+	I66 : dAve : 	(-0.0794814 0.0104639 -0.0981748)
+	I67 : dAve : 	(-0.0740648 0.0306787 -0.0981748)
+	I68 : dAve : 	(-0.0636009 0.0488027 -0.0981748)
+	I69 : dAve : 	(-0.0488027 0.0636009 -0.0981748)
+	I70 : dAve : 	(-0.0306787 0.0740648 -0.0981748)
+	I71 : dAve : 	(-0.0104639 0.0794814 -0.0981748)
+
+    Adding MRF
+
+No MRF models present
+
+    Adding fvOptions
+
+fvDOM : Allocated 72 rays with average orientation:
+	I0 : dAve : 	(0.0104639 0.0794814 0.0981748)
+	I1 : dAve : 	(0.0306787 0.0740648 0.0981748)
+	I2 : dAve : 	(0.0488027 0.0636009 0.0981748)
+	I3 : dAve : 	(0.0636009 0.0488027 0.0981748)
+	I4 : dAve : 	(0.0740648 0.0306787 0.0981748)
+	I5 : dAve : 	(0.0794814 0.0104639 0.0981748)
+	I6 : dAve : 	(0.0794814 -0.0104639 0.0981748)
+	I7 : dAve : 	(0.0740648 -0.0306787 0.0981748)
+	I8 : dAve : 	(0.0636009 -0.0488027 0.0981748)
+	I9 : dAve : 	(0.0488027 -0.0636009 0.0981748)
+	I10 : dAve : 	(0.0306787 -0.0740648 0.0981748)
+	I11 : dAve : 	(0.0104639 -0.0794814 0.0981748)
+	I12 : dAve : 	(-0.0104639 -0.0794814 0.0981748)
+	I13 : dAve : 	(-0.0306787 -0.0740648 0.0981748)
+	I14 : dAve : 	(-0.0488027 -0.0636009 0.0981748)
+	I15 : dAve : 	(-0.0636009 -0.0488027 0.0981748)
+	I16 : dAve : 	(-0.0740648 -0.0306787 0.0981748)
+	I17 : dAve : 	(-0.0794814 -0.0104639 0.0981748)
+	I18 : dAve : 	(-0.0794814 0.0104639 0.0981748)
+	I19 : dAve : 	(-0.0740648 0.0306787 0.0981748)
+	I20 : dAve : 	(-0.0636009 0.0488027 0.0981748)
+	I21 : dAve : 	(-0.0488027 0.0636009 0.0981748)
+	I22 : dAve : 	(-0.0306787 0.0740648 0.0981748)
+	I23 : dAve : 	(-0.0104639 0.0794814 0.0981748)
+	I24 : dAve : 	(0.0325957 0.247589 1.38829e-17)
+	I25 : dAve : 	(0.0955659 0.230716 1.38829e-17)
+	I26 : dAve : 	(0.152023 0.198121 1.38829e-17)
+	I27 : dAve : 	(0.198121 0.152023 1.38829e-17)
+	I28 : dAve : 	(0.230716 0.0955659 1.38829e-17)
+	I29 : dAve : 	(0.247589 0.0325957 1.38829e-17)
+	I30 : dAve : 	(0.247589 -0.0325957 1.38829e-17)
+	I31 : dAve : 	(0.230716 -0.0955659 1.38829e-17)
+	I32 : dAve : 	(0.198121 -0.152023 1.38829e-17)
+	I33 : dAve : 	(0.152023 -0.198121 1.38829e-17)
+	I34 : dAve : 	(0.0955659 -0.230716 1.38829e-17)
+	I35 : dAve : 	(0.0325957 -0.247589 1.38829e-17)
+	I36 : dAve : 	(-0.0325957 -0.247589 1.38829e-17)
+	I37 : dAve : 	(-0.0955659 -0.230716 1.38829e-17)
+	I38 : dAve : 	(-0.152023 -0.198121 1.38829e-17)
+	I39 : dAve : 	(-0.198121 -0.152023 1.38829e-17)
+	I40 : dAve : 	(-0.230716 -0.0955659 1.38829e-17)
+	I41 : dAve : 	(-0.247589 -0.0325957 1.38829e-17)
+	I42 : dAve : 	(-0.247589 0.0325957 1.38829e-17)
+	I43 : dAve : 	(-0.230716 0.0955659 1.38829e-17)
+	I44 : dAve : 	(-0.198121 0.152023 1.38829e-17)
+	I45 : dAve : 	(-0.152023 0.198121 1.38829e-17)
+	I46 : dAve : 	(-0.0955659 0.230716 1.38829e-17)
+	I47 : dAve : 	(-0.0325957 0.247589 1.38829e-17)
+	I48 : dAve : 	(0.0104639 0.0794814 -0.0981748)
+	I49 : dAve : 	(0.0306787 0.0740648 -0.0981748)
+	I50 : dAve : 	(0.0488027 0.0636009 -0.0981748)
+	I51 : dAve : 	(0.0636009 0.0488027 -0.0981748)
+	I52 : dAve : 	(0.0740648 0.0306787 -0.0981748)
+	I53 : dAve : 	(0.0794814 0.0104639 -0.0981748)
+	I54 : dAve : 	(0.0794814 -0.0104639 -0.0981748)
+	I55 : dAve : 	(0.0740648 -0.0306787 -0.0981748)
+	I56 : dAve : 	(0.0636009 -0.0488027 -0.0981748)
+	I57 : dAve : 	(0.0488027 -0.0636009 -0.0981748)
+	I58 : dAve : 	(0.0306787 -0.0740648 -0.0981748)
+	I59 : dAve : 	(0.0104639 -0.0794814 -0.0981748)
+	I60 : dAve : 	(-0.0104639 -0.0794814 -0.0981748)
+	I61 : dAve : 	(-0.0306787 -0.0740648 -0.0981748)
+	I62 : dAve : 	(-0.0488027 -0.0636009 -0.0981748)
+	I63 : dAve : 	(-0.0636009 -0.0488027 -0.0981748)
+	I64 : dAve : 	(-0.0740648 -0.0306787 -0.0981748)
+	I65 : dAve : 	(-0.0794814 -0.0104639 -0.0981748)
+	I66 : dAve : 	(-0.0794814 0.0104639 -0.0981748)
+	I67 : dAve : 	(-0.0740648 0.0306787 -0.0981748)
+	I68 : dAve : 	(-0.0636009 0.0488027 -0.0981748)
+	I69 : dAve : 	(-0.0488027 0.0636009 -0.0981748)
+	I70 : dAve : 	(-0.0306787 0.0740648 -0.0981748)
+	I71 : dAve : 	(-0.0104639 0.0794814 -0.0981748)
+
+    Adding MRF
+
+No MRF models present
+
+    Adding fvOptions
+
+Time = 1
+
+
+Solving for fluid region zonetwo
+Time = 1
+
+
+Solving for fluid region zonetwo
+Time = 1
+
+
+Solving for fluid region zonetwo
+Time = 1
+
+
+Solving for fluid region zonetwo
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCGStab:  Solving for h, Initial residual = 1, Final residual = 0.0190485, No Iterations 1
+DILUPBiCGStab:  Solving for h, Initial residual = 1, Final residual = 0.0190485, No Iterations 1
+Radiation solver iter: 0
+Radiation solver iter: 0
+DILUPBiCGStab:  Solving for h, Initial residual = 1, Final residual = 0.0190485, No Iterations 1
+DILUPBiCGStab:  Solving for h, Initial residual = 1, Final residual = 0.0190485, No Iterations 1
+Radiation solver iter: 0
+Radiation solver iter: 0
+ Value of nBands in abso 1
+ Value of nBands in abso 1
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+ Value of nBands in abso 1
+ Value of nBands in abso 1
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+Selecting boundary radiation Model: lookup
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 9.82747e-17, No Iterations 1
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 9.82747e-17, No Iterations 1
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 9.82747e-17, No Iterations 1
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 9.82747e-17, No Iterations 1
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 1.55351e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 1.55351e-14, No Iterations 1
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 1.55351e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 1.55351e-14, No Iterations 1
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 6.95043e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 6.95043e-14, No Iterations 1
+Printing the new value of Ilambda0.0118442
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 6.95043e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 6.95043e-14, No Iterations 1
+Printing the new value of Ilambda0.0118442
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 6.64e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 6.64e-14, No Iterations 1
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 6.64e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 6.64e-14, No Iterations 1
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 2.1772e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 2.1772e-14, No Iterations 1
+Printing the new value of Ilambda0.0118783
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 2.1772e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 2.1772e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 1.66156e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 1.66156e-15, No Iterations 1
+Printing the new value of Ilambda0.0118783
+Printing the new value of Ilambda0.0118783
+Printing the new value of Ilambda0.0119032
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 7.41551e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 7.41551e-14, No Iterations 1
+Printing the new value of Ilambda0.0119321
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 1.66156e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 1.66156e-15, No Iterations 1
+Printing the new value of Ilambda0.0119032
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 4.5518e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 4.5518e-15, No Iterations 1
+Printing the new value of Ilambda0.011964
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 7.41551e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 7.41551e-14, No Iterations 1
+Printing the new value of Ilambda0.0119321
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 4.5518e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 4.5518e-15, No Iterations 1
+Printing the new value of Ilambda0.011964
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+Printing the new value of Ilambda0.0120868
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+Printing the new value of Ilambda0.0120868
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+Printing the new value of Ilambda0.0122179
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+Printing the new value of Ilambda0.0122731
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+Printing the new value of Ilambda0.0122179
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+Printing the new value of Ilambda0.0123516
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+Printing the new value of Ilambda0.0122731
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+Printing the new value of Ilambda0.0123716
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 1, Final residual = 4.25084e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 1, Final residual = 4.25084e-16, No Iterations 1
+Printing the new value of Ilambda0.0123716
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+Printing the new value of Ilambda0.0123516
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 1, Final residual = 1.6807e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 1, Final residual = 1.6807e-16, No Iterations 1
+Printing the new value of Ilambda0.0123516
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+Printing the new value of Ilambda0.0123716
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 1, Final residual = 1.06202e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 1, Final residual = 1.06202e-15, No Iterations 1
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 1, Final residual = 4.25084e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 1, Final residual = 4.25084e-16, No Iterations 1
+Printing the new value of Ilambda0.0123716
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 1, Final residual = 1.56502e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 1, Final residual = 1.56502e-15, No Iterations 1
+Printing the new value of Ilambda0.0122731
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 1, Final residual = 1.6807e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 1, Final residual = 1.6807e-16, No Iterations 1
+Printing the new value of Ilambda0.0123516
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 1, Final residual = 1.27283e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 1, Final residual = 1.27283e-15, No Iterations 1
+Printing the new value of Ilambda0.0122179
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 1, Final residual = 2.52785e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 1, Final residual = 2.52785e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 1, Final residual = 1.06202e-15, No Iterations 1
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 1, Final residual = 1.06202e-15, No Iterations 1
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 1, Final residual = 8.98849e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 1, Final residual = 8.98849e-16, No Iterations 1
+Printing the new value of Ilambda0.0120868
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 1, Final residual = 1.56502e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 1, Final residual = 1.56502e-15, No Iterations 1
+Printing the new value of Ilambda0.0122731
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 1, Final residual = 8.97646e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 1, Final residual = 8.97646e-16, No Iterations 1
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 1, Final residual = 1.27283e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 1, Final residual = 1.27283e-15, No Iterations 1
+Printing the new value of Ilambda0.0122179
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_24_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+DILUPBiCG:  Solving for ILambda_24_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+Printing the new value of Ilambda0.011964
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 1, Final residual = 2.52785e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 1, Final residual = 2.52785e-15, No Iterations 1
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_25_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_25_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+Printing the new value of Ilambda0.0119321
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 1, Final residual = 8.98849e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 1, Final residual = 8.98849e-16, No Iterations 1
+Printing the new value of Ilambda0.0120868
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_26_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_26_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+Printing the new value of Ilambda0.0119032
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 1, Final residual = 8.97646e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 1, Final residual = 8.97646e-16, No Iterations 1
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_27_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_27_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+Printing the new value of Ilambda0.0118783
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_24_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+DILUPBiCG:  Solving for ILambda_24_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+Printing the new value of Ilambda0.011964
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_28_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_28_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_25_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_25_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+Printing the new value of Ilambda0.0119321
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_29_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_29_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+Printing the new value of Ilambda0.0118442
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_30_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_30_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_26_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_26_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0119032
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_31_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+DILUPBiCG:  Solving for ILambda_31_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+DILUPBiCG:  Solving for ILambda_27_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_27_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+Printing the new value of Ilambda0.0118783
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_32_0, Initial residual = 1, Final residual = 5.10875e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_32_0, Initial residual = 1, Final residual = 5.10875e-15, No Iterations 1
+Printing the new value of Ilambda0.266513
+Printing the new value of Ilambda0.266513
+DILUPBiCG:  Solving for ILambda_28_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_28_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_33_0, Initial residual = 1, Final residual = 3.86288e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_33_0, Initial residual = 1, Final residual = 3.86288e-14, No Iterations 1
+Printing the new value of Ilambda0.273024
+Printing the new value of Ilambda0.273024
+DILUPBiCG:  Solving for ILambda_29_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_29_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+Printing the new value of Ilambda0.0118442
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_34_0, Initial residual = 1, Final residual = 3.99731e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_34_0, Initial residual = 1, Final residual = 3.99731e-15, No Iterations 1
+Printing the new value of Ilambda0.291747
+Printing the new value of Ilambda0.291747
+DILUPBiCG:  Solving for ILambda_30_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_30_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_35_0, Initial residual = 1, Final residual = 2.46332e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_35_0, Initial residual = 1, Final residual = 2.46332e-14, No Iterations 1
+Printing the new value of Ilambda0.328682
+Printing the new value of Ilambda0.328682
+DILUPBiCG:  Solving for ILambda_31_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+DILUPBiCG:  Solving for ILambda_31_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+DILUPBiCG:  Solving for ILambda_36_0, Initial residual = 1, Final residual = 5.66097e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_36_0, Initial residual = 1, Final residual = 5.66097e-14, No Iterations 1
+Printing the new value of Ilambda0.400815
+Printing the new value of Ilambda0.400815
+DILUPBiCG:  Solving for ILambda_32_0, Initial residual = 1, Final residual = 5.10875e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_32_0, Initial residual = 1, Final residual = 5.10875e-15, No Iterations 1
+Printing the new value of Ilambda0.266513
+Printing the new value of Ilambda0.266513
+DILUPBiCG:  Solving for ILambda_37_0, Initial residual = 1, Final residual = 4.24081e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_37_0, Initial residual = 1, Final residual = 4.24081e-14, No Iterations 1
+Printing the new value of Ilambda0.565704
+Printing the new value of Ilambda0.565704
+DILUPBiCG:  Solving for ILambda_33_0, Initial residual = 1, Final residual = 3.86288e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_33_0, Initial residual = 1, Final residual = 3.86288e-14, No Iterations 1
+Printing the new value of Ilambda0.273024
+Printing the new value of Ilambda0.273024
+DILUPBiCG:  Solving for ILambda_38_0, Initial residual = 1, Final residual = 3.41913e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_38_0, Initial residual = 1, Final residual = 3.41913e-14, No Iterations 1
+Printing the new value of Ilambda1.10945
+Printing the new value of Ilambda1.10945
+DILUPBiCG:  Solving for ILambda_39_0, Initial residual = 1, Final residual = 1.68852e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_39_0, Initial residual = 1, Final residual = 1.68852e-14, No Iterations 1
+Printing the new value of Ilambda4.87095
+Printing the new value of Ilambda4.87095
+DILUPBiCG:  Solving for ILambda_34_0, Initial residual = 1, Final residual = 3.99731e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_34_0, Initial residual = 1, Final residual = 3.99731e-15, No Iterations 1
+Printing the new value of Ilambda0.291747
+Printing the new value of Ilambda0.291747
+DILUPBiCG:  Solving for ILambda_40_0, Initial residual = 1, Final residual = 7.55095e-05, No Iterations 5
+DILUPBiCG:  Solving for ILambda_40_0, Initial residual = 1, Final residual = 7.55095e-05, No Iterations 5
+Printing the new value of Ilambda15.118
+Printing the new value of Ilambda15.118
+DILUPBiCG:  Solving for ILambda_35_0, Initial residual = 1, Final residual = 2.46332e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_35_0, Initial residual = 1, Final residual = 2.46332e-14, No Iterations 1
+Printing the new value of Ilambda0.328682
+Printing the new value of Ilambda0.328682
+DILUPBiCG:  Solving for ILambda_41_0, Initial residual = 1, Final residual = 0.00302879, No Iterations 5
+DILUPBiCG:  Solving for ILambda_41_0, Initial residual = 1, Final residual = 0.00302879, No Iterations 5
+Printing the new value of Ilambda10.7245
+Printing the new value of Ilambda10.7245
+DILUPBiCG:  Solving for ILambda_36_0, Initial residual = 1, Final residual = 5.66097e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_36_0, Initial residual = 1, Final residual = 5.66097e-14, No Iterations 1
+Printing the new value of Ilambda0.400815
+Printing the new value of Ilambda0.400815
+DILUPBiCG:  Solving for ILambda_42_0, Initial residual = 1, Final residual = 0.00751605, No Iterations 5
+DILUPBiCG:  Solving for ILambda_42_0, Initial residual = 1, Final residual = 0.00751605, No Iterations 5
+Printing the new value of Ilambda7.89921
+Printing the new value of Ilambda7.89921
+DILUPBiCG:  Solving for ILambda_37_0, Initial residual = 1, Final residual = 4.24081e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_37_0, Initial residual = 1, Final residual = 4.24081e-14, No Iterations 1
+Printing the new value of Ilambda0.565704
+Printing the new value of Ilambda0.565704
+DILUPBiCG:  Solving for ILambda_43_0, Initial residual = 1, Final residual = 0.00239434, No Iterations 5
+DILUPBiCG:  Solving for ILambda_43_0, Initial residual = 1, Final residual = 0.00239434, No Iterations 5
+Printing the new value of Ilambda5.94399
+Printing the new value of Ilambda5.94399
+DILUPBiCG:  Solving for ILambda_38_0, Initial residual = 1, Final residual = 3.41913e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_38_0, Initial residual = 1, Final residual = 3.41913e-14, No Iterations 1
+Printing the new value of Ilambda1.10945
+Printing the new value of Ilambda1.10945
+DILUPBiCG:  Solving for ILambda_44_0, Initial residual = 1, Final residual = 0.0498283, No Iterations 5
+DILUPBiCG:  Solving for ILambda_44_0, Initial residual = 1, Final residual = 0.0498283, No Iterations 5
+Printing the new value of Ilambda3.54309
+Printing the new value of Ilambda3.54309
+DILUPBiCG:  Solving for ILambda_39_0, Initial residual = 1, Final residual = 1.68852e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_39_0, Initial residual = 1, Final residual = 1.68852e-14, No Iterations 1
+Printing the new value of Ilambda4.87095
+Printing the new value of Ilambda4.87095
+DILUPBiCG:  Solving for ILambda_45_0, Initial residual = 1, Final residual = 0.00484807, No Iterations 5
+DILUPBiCG:  Solving for ILambda_45_0, Initial residual = 1, Final residual = 0.00484807, No Iterations 5
+Printing the new value of Ilambda3.15314
+Printing the new value of Ilambda3.15314
+DILUPBiCG:  Solving for ILambda_40_0, Initial residual = 1, Final residual = 7.55095e-05, No Iterations 5
+DILUPBiCG:  Solving for ILambda_40_0, Initial residual = 1, Final residual = 7.55095e-05, No Iterations 5
+Printing the new value of Ilambda15.118
+Printing the new value of Ilambda15.118
+DILUPBiCG:  Solving for ILambda_46_0, Initial residual = 1, Final residual = 0.00132406, No Iterations 5
+DILUPBiCG:  Solving for ILambda_46_0, Initial residual = 1, Final residual = 0.00132406, No Iterations 5
+Printing the new value of Ilambda2.51547
+Printing the new value of Ilambda2.51547
+DILUPBiCG:  Solving for ILambda_41_0, Initial residual = 1, Final residual = 0.00302879, No Iterations 5
+DILUPBiCG:  Solving for ILambda_41_0, Initial residual = 1, Final residual = 0.00302879, No Iterations 5
+Printing the new value of Ilambda10.7245
+Printing the new value of Ilambda10.7245
+DILUPBiCG:  Solving for ILambda_47_0, Initial residual = 1, Final residual = 2.04267e-05, No Iterations 5
+DILUPBiCG:  Solving for ILambda_47_0, Initial residual = 1, Final residual = 2.04267e-05, No Iterations 5
+Printing the new value of Ilambda2.41426
+Printing the new value of Ilambda2.41426
+DILUPBiCG:  Solving for ILambda_42_0, Initial residual = 1, Final residual = 0.00751605, No Iterations 5
+DILUPBiCG:  Solving for ILambda_42_0, Initial residual = 1, Final residual = 0.00751605, No Iterations 5
+Printing the new value of Ilambda7.89921
+Printing the new value of Ilambda7.89921
+DILUPBiCG:  Solving for ILambda_48_0, Initial residual = 1, Final residual = 2.37173e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_48_0, Initial residual = 1, Final residual = 2.37173e-15, No Iterations 1
+Printing the new value of Ilambda2.40436
+Printing the new value of Ilambda2.40436
+DILUPBiCG:  Solving for ILambda_43_0, Initial residual = 1, Final residual = 0.00239434, No Iterations 5
+DILUPBiCG:  Solving for ILambda_43_0, Initial residual = 1, Final residual = 0.00239434, No Iterations 5
+DILUPBiCG:  Solving for ILambda_49_0, Initial residual = 1, Final residual = 1.39924e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_49_0, Initial residual = 1, Final residual = 1.39924e-15, No Iterations 1
+Printing the new value of Ilambda5.94399
+Printing the new value of Ilambda5.94399
+Printing the new value of Ilambda2.15042
+Printing the new value of Ilambda2.15042
+DILUPBiCG:  Solving for ILambda_50_0, Initial residual = 1, Final residual = 5.44838e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_50_0, Initial residual = 1, Final residual = 5.44838e-16, No Iterations 1
+Printing the new value of Ilambda2.02249
+Printing the new value of Ilambda2.02249
+DILUPBiCG:  Solving for ILambda_44_0, Initial residual = 1, Final residual = 0.0498283, No Iterations 5
+DILUPBiCG:  Solving for ILambda_44_0, Initial residual = 1, Final residual = 0.0498283, No Iterations 5
+Printing the new value of Ilambda3.54309
+Printing the new value of Ilambda3.54309
+DILUPBiCG:  Solving for ILambda_51_0, Initial residual = 1, Final residual = 5.77351e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_51_0, Initial residual = 1, Final residual = 5.77351e-16, No Iterations 1
+Printing the new value of Ilambda1.98501
+Printing the new value of Ilambda1.98501
+DILUPBiCG:  Solving for ILambda_45_0, Initial residual = 1, Final residual = 0.00484807, No Iterations 5
+DILUPBiCG:  Solving for ILambda_45_0, Initial residual = 1, Final residual = 0.00484807, No Iterations 5
+Printing the new value of Ilambda3.15314
+Printing the new value of Ilambda3.15314
+DILUPBiCG:  Solving for ILambda_52_0, Initial residual = 1, Final residual = 5.11453e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_52_0, Initial residual = 1, Final residual = 5.11453e-16, No Iterations 1
+Printing the new value of Ilambda2.02911
+Printing the new value of Ilambda2.02911
+DILUPBiCG:  Solving for ILambda_46_0, Initial residual = 1, Final residual = 0.00132406, No Iterations 5
+DILUPBiCG:  Solving for ILambda_46_0, Initial residual = 1, Final residual = 0.00132406, No Iterations 5
+Printing the new value of Ilambda2.51547
+Printing the new value of Ilambda2.51547
+DILUPBiCG:  Solving for ILambda_53_0, Initial residual = 1, Final residual = 3.28375e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_53_0, Initial residual = 1, Final residual = 3.28375e-16, No Iterations 1
+Printing the new value of Ilambda2.16591
+Printing the new value of Ilambda2.16591
+DILUPBiCG:  Solving for ILambda_47_0, Initial residual = 1, Final residual = 2.04267e-05, No Iterations 5
+DILUPBiCG:  Solving for ILambda_47_0, Initial residual = 1, Final residual = 2.04267e-05, No Iterations 5
+Printing the new value of Ilambda2.41426
+Printing the new value of Ilambda2.41426
+DILUPBiCG:  Solving for ILambda_54_0, Initial residual = 1, Final residual = 2.10411e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_54_0, Initial residual = 1, Final residual = 2.10411e-15, No Iterations 1
+Printing the new value of Ilambda2.43574
+Printing the new value of Ilambda2.43574
+DILUPBiCG:  Solving for ILambda_48_0, Initial residual = 1, Final residual = 2.37173e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_48_0, Initial residual = 1, Final residual = 2.37173e-15, No Iterations 1
+Printing the new value of Ilambda2.40436
+Printing the new value of Ilambda2.40436
+DILUPBiCG:  Solving for ILambda_55_0, Initial residual = 1, Final residual = 3.11394e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_55_0, Initial residual = 1, Final residual = 3.11394e-15, No Iterations 1
+Printing the new value of Ilambda2.95982
+Printing the new value of Ilambda2.95982
+DILUPBiCG:  Solving for ILambda_49_0, Initial residual = 1, Final residual = 1.39924e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_49_0, Initial residual = 1, Final residual = 1.39924e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_56_0, Initial residual = 1, Final residual = 3.18748e-06, No Iterations 5
+DILUPBiCG:  Solving for ILambda_56_0, Initial residual = 1, Final residual = 3.18748e-06, No Iterations 5
+Printing the new value of Ilambda2.15042
+Printing the new value of Ilambda2.15042
+Printing the new value of Ilambda1.52839
+Printing the new value of Ilambda1.52839
+DILUPBiCG:  Solving for ILambda_57_0, Initial residual = 1, Final residual = 0.000105708, No Iterations 5
+DILUPBiCG:  Solving for ILambda_57_0, Initial residual = 1, Final residual = 0.000105708, No Iterations 5
+Printing the new value of Ilambda0.734592
+Printing the new value of Ilambda0.734592
+DILUPBiCG:  Solving for ILambda_50_0, Initial residual = 1, Final residual = 5.44838e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_50_0, Initial residual = 1, Final residual = 5.44838e-16, No Iterations 1
+Printing the new value of Ilambda2.02249
+Printing the new value of Ilambda2.02249
+DILUPBiCG:  Solving for ILambda_58_0, Initial residual = 1, Final residual = 0.000321968, No Iterations 5
+DILUPBiCG:  Solving for ILambda_58_0, Initial residual = 1, Final residual = 0.000321968, No Iterations 5
+Printing the new value of Ilambda0.495939
+Printing the new value of Ilambda0.495939
+DILUPBiCG:  Solving for ILambda_51_0, Initial residual = 1, Final residual = 5.77351e-16, No Iterations 1
+Printing the new value of Ilambda1.98501
+DILUPBiCG:  Solving for ILambda_51_0, Initial residual = 1, Final residual = 5.77351e-16, No Iterations 1
+Printing the new value of Ilambda1.98501
+DILUPBiCG:  Solving for ILambda_59_0, Initial residual = 1, Final residual = 0.000416659, No Iterations 5
+DILUPBiCG:  Solving for ILambda_59_0, Initial residual = 1, Final residual = 0.000416659, No Iterations 5
+Printing the new value of Ilambda0.385455
+Printing the new value of Ilambda0.385455
+DILUPBiCG:  Solving for ILambda_52_0, Initial residual = 1, Final residual = 5.11453e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_52_0, Initial residual = 1, Final residual = 5.11453e-16, No Iterations 1
+Printing the new value of Ilambda2.02911
+Printing the new value of Ilambda2.02911
+DILUPBiCG:  Solving for ILambda_60_0, Initial residual = 1, Final residual = 0.000300132, No Iterations 5
+DILUPBiCG:  Solving for ILambda_60_0, Initial residual = 1, Final residual = 0.000300132, No Iterations 5
+Printing the new value of Ilambda0.325417
+Printing the new value of Ilambda0.325417
+DILUPBiCG:  Solving for ILambda_53_0, Initial residual = 1, Final residual = 3.28375e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_53_0, Initial residual = 1, Final residual = 3.28375e-16, No Iterations 1
+Printing the new value of Ilambda2.16591
+Printing the new value of Ilambda2.16591
+DILUPBiCG:  Solving for ILambda_61_0, Initial residual = 1, Final residual = 0.00023154, No Iterations 5
+DILUPBiCG:  Solving for ILambda_61_0, Initial residual = 1, Final residual = 0.00023154, No Iterations 5
+Printing the new value of Ilambda0.291214
+Printing the new value of Ilambda0.291214
+DILUPBiCG:  Solving for ILambda_54_0, Initial residual = 1, Final residual = 2.10411e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_54_0, Initial residual = 1, Final residual = 2.10411e-15, No Iterations 1
+Printing the new value of Ilambda2.43574
+Printing the new value of Ilambda2.43574
+DILUPBiCG:  Solving for ILambda_62_0, Initial residual = 1, Final residual = 0.000191808, No Iterations 5
+DILUPBiCG:  Solving for ILambda_62_0, Initial residual = 1, Final residual = 0.000191808, No Iterations 5
+Printing the new value of Ilambda0.272983
+Printing the new value of Ilambda0.272983
+DILUPBiCG:  Solving for ILambda_55_0, Initial residual = 1, Final residual = 3.11394e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_55_0, Initial residual = 1, Final residual = 3.11394e-15, No Iterations 1
+Printing the new value of Ilambda2.95982
+Printing the new value of Ilambda2.95982
+DILUPBiCG:  Solving for ILambda_63_0, Initial residual = 1, Final residual = 7.16827e-07, No Iterations 5
+DILUPBiCG:  Solving for ILambda_63_0, Initial residual = 1, Final residual = 7.16827e-07, No Iterations 5
+Printing the new value of Ilambda0.266512
+Printing the new value of Ilambda0.266512
+DILUPBiCG:  Solving for ILambda_56_0, Initial residual = 1, Final residual = 3.18748e-06, No Iterations 5
+DILUPBiCG:  Solving for ILambda_56_0, Initial residual = 1, Final residual = 3.18748e-06, No Iterations 5
+Printing the new value of Ilambda1.52839
+Printing the new value of Ilambda1.52839
+DILUPBiCG:  Solving for ILambda_64_0, Initial residual = 1, Final residual = 1.00201e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_64_0, Initial residual = 1, Final residual = 1.00201e-15, No Iterations 1
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+DILUPBiCG:  Solving for ILambda_57_0, Initial residual = 1, Final residual = 0.000105708, No Iterations 5
+DILUPBiCG:  Solving for ILambda_57_0, Initial residual = 1, Final residual = 0.000105708, No Iterations 5
+Printing the new value of Ilambda0.734592
+Printing the new value of Ilambda0.734592
+DILUPBiCG:  Solving for ILambda_65_0, Initial residual = 1, Final residual = 1.39896e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_65_0, Initial residual = 1, Final residual = 1.39896e-14, No Iterations 1
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_66_0, Initial residual = 1, Final residual = 7.01536e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_66_0, Initial residual = 1, Final residual = 7.01536e-14, No Iterations 1
+Printing the new value of Ilambda0.0118442
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_58_0, Initial residual = 1, Final residual = 0.000321968, No Iterations 5
+DILUPBiCG:  Solving for ILambda_58_0, Initial residual = 1, Final residual = 0.000321968, No Iterations 5
+Printing the new value of Ilambda0.495939
+Printing the new value of Ilambda0.495939
+DILUPBiCG:  Solving for ILambda_67_0, Initial residual = 1, Final residual = 6.66149e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_67_0, Initial residual = 1, Final residual = 6.66149e-14, No Iterations 1
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_59_0, Initial residual = 1, Final residual = 0.000416659, No Iterations 5
+DILUPBiCG:  Solving for ILambda_59_0, Initial residual = 1, Final residual = 0.000416659, No Iterations 5
+Printing the new value of Ilambda0.385455
+Printing the new value of Ilambda0.385455
+DILUPBiCG:  Solving for ILambda_68_0, Initial residual = 1, Final residual = 2.08882e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_68_0, Initial residual = 1, Final residual = 2.08882e-14, No Iterations 1
+Printing the new value of Ilambda0.0118783
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_60_0, Initial residual = 1, Final residual = 0.000300132, No Iterations 5
+DILUPBiCG:  Solving for ILambda_60_0, Initial residual = 1, Final residual = 0.000300132, No Iterations 5
+Printing the new value of Ilambda0.325417
+Printing the new value of Ilambda0.325417
+DILUPBiCG:  Solving for ILambda_69_0, Initial residual = 1, Final residual = 1.56385e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_69_0, Initial residual = 1, Final residual = 1.56385e-15, No Iterations 1
+Printing the new value of Ilambda0.0119032
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_61_0, Initial residual = 1, Final residual = 0.00023154, No Iterations 5
+DILUPBiCG:  Solving for ILambda_61_0, Initial residual = 1, Final residual = 0.00023154, No Iterations 5
+Printing the new value of Ilambda0.291214
+Printing the new value of Ilambda0.291214
+DILUPBiCG:  Solving for ILambda_70_0, Initial residual = 1, Final residual = 7.46002e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_70_0, Initial residual = 1, Final residual = 7.46002e-14, No Iterations 1
+Printing the new value of Ilambda0.0119321
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_62_0, Initial residual = 1, Final residual = 0.000191808, No Iterations 5
+DILUPBiCG:  Solving for ILambda_62_0, Initial residual = 1, Final residual = 0.000191808, No Iterations 5
+Printing the new value of Ilambda0.272983
+Printing the new value of Ilambda0.272983
+DILUPBiCG:  Solving for ILambda_71_0, Initial residual = 1, Final residual = 4.99837e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_71_0, Initial residual = 1, Final residual = 4.99837e-15, No Iterations 1
+Printing the new value of Ilambda0.011964
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_63_0, Initial residual = 1, Final residual = 7.16827e-07, No Iterations 5
+DILUPBiCG:  Solving for ILambda_63_0, Initial residual = 1, Final residual = 7.16827e-07, No Iterations 5
+DILUPBiCG:  Solving for ILambda_72_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_72_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+Printing the new value of Ilambda0.266512
+Printing the new value of Ilambda0.266512
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_73_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_73_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+Printing the new value of Ilambda0.0120868
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_64_0, Initial residual = 1, Final residual = 1.00201e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_64_0, Initial residual = 1, Final residual = 1.00201e-15, No Iterations 1
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+DILUPBiCG:  Solving for ILambda_74_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_74_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_65_0, Initial residual = 1, Final residual = 1.39896e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_65_0, Initial residual = 1, Final residual = 1.39896e-14, No Iterations 1
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_75_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+DILUPBiCG:  Solving for ILambda_75_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+Printing the new value of Ilambda0.0122179
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_66_0, Initial residual = 1, Final residual = 7.01536e-14, No Iterations 1
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_66_0, Initial residual = 1, Final residual = 7.01536e-14, No Iterations 1
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_76_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+DILUPBiCG:  Solving for ILambda_76_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+Printing the new value of Ilambda0.0122731
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_67_0, Initial residual = 1, Final residual = 6.66149e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_67_0, Initial residual = 1, Final residual = 6.66149e-14, No Iterations 1
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_77_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+DILUPBiCG:  Solving for ILambda_77_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_68_0, Initial residual = 1, Final residual = 2.08882e-14, No Iterations 1
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_68_0, Initial residual = 1, Final residual = 2.08882e-14, No Iterations 1
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_78_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_69_0, Initial residual = 1, Final residual = 1.56385e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_69_0, Initial residual = 1, Final residual = 1.56385e-15, No Iterations 1
+Printing the new value of Ilambda0.0119032
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_78_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_79_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_70_0, Initial residual = 1, Final residual = 7.46002e-14, No Iterations 1
+DILUPBiCG:  Solving for ILambda_70_0, Initial residual = 1, Final residual = 7.46002e-14, No Iterations 1
+Printing the new value of Ilambda0.0119321
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_79_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_80_0, Initial residual = 1, Final residual = 8.89413e-17, No Iterations 1
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_71_0, Initial residual = 1, Final residual = 4.99837e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_71_0, Initial residual = 1, Final residual = 4.99837e-15, No Iterations 1
+Printing the new value of Ilambda0.011964
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_80_0, Initial residual = 1, Final residual = 8.89413e-17, No Iterations 1
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_81_0, Initial residual = 1, Final residual = 1.43487e-15, No Iterations 1
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_72_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_72_0, Initial residual = 1, Final residual = 6.67079e-08, No Iterations 3
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_82_0, Initial residual = 1, Final residual = 4.6846e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_81_0, Initial residual = 1, Final residual = 1.43487e-15, No Iterations 1
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_73_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_73_0, Initial residual = 1, Final residual = 2.08092e-08, No Iterations 4
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_83_0, Initial residual = 1, Final residual = 8.62246e-16, No Iterations 1
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_82_0, Initial residual = 1, Final residual = 4.6846e-16, No Iterations 1
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_74_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_74_0, Initial residual = 1, Final residual = 9.04518e-08, No Iterations 4
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_84_0, Initial residual = 1, Final residual = 1.6874e-15, No Iterations 1
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_83_0, Initial residual = 1, Final residual = 8.62246e-16, No Iterations 1
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_75_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_85_0, Initial residual = 1, Final residual = 2.24598e-15, No Iterations 1
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_75_0, Initial residual = 1, Final residual = 1.53844e-07, No Iterations 4
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_84_0, Initial residual = 1, Final residual = 1.6874e-15, No Iterations 1
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_76_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_86_0, Initial residual = 1, Final residual = 2.68833e-15, No Iterations 1
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_76_0, Initial residual = 1, Final residual = 1.42672e-07, No Iterations 4
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_85_0, Initial residual = 1, Final residual = 2.24598e-15, No Iterations 1
+Printing the new value of Ilambda0.0121549
+DILUPBiCG:  Solving for ILambda_77_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_87_0, Initial residual = 1, Final residual = 1.31329e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_77_0, Initial residual = 1, Final residual = 7.30916e-08, No Iterations 4
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_86_0, Initial residual = 1, Final residual = 2.68833e-15, No Iterations 1
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_78_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_88_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_78_0, Initial residual = 1, Final residual = 1.5545e-08, No Iterations 4
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_87_0, Initial residual = 1, Final residual = 1.31329e-15, No Iterations 1
+Printing the new value of Ilambda0.0120161
+DILUPBiCG:  Solving for ILambda_79_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_89_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_79_0, Initial residual = 1, Final residual = 7.41257e-08, No Iterations 3
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_88_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_80_0, Initial residual = 1, Final residual = 8.89413e-17, No Iterations 1
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_90_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_80_0, Initial residual = 1, Final residual = 8.89413e-17, No Iterations 1
+Printing the new value of Ilambda0.0123716
+DILUPBiCG:  Solving for ILambda_89_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_81_0, Initial residual = 1, Final residual = 1.43487e-15, No Iterations 1
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_91_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_90_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_81_0, Initial residual = 1, Final residual = 1.43487e-15, No Iterations 1
+Printing the new value of Ilambda0.0123516
+DILUPBiCG:  Solving for ILambda_82_0, Initial residual = 1, Final residual = 4.6846e-16, No Iterations 1
+Printing the new value of Ilambda0.0123183
+DILUPBiCG:  Solving for ILambda_92_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_91_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_93_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_82_0, Initial residual = 1, Final residual = 4.6846e-16, No Iterations 1
+DILUPBiCG:  Solving for ILambda_83_0, Initial residual = 1, Final residual = 8.62246e-16, No Iterations 1
+Printing the new value of Ilambda0.0123183
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_92_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_94_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_84_0, Initial residual = 1, Final residual = 1.6874e-15, No Iterations 1
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_83_0, Initial residual = 1, Final residual = 8.62246e-16, No Iterations 1
+Printing the new value of Ilambda0.0122731
+DILUPBiCG:  Solving for ILambda_93_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_95_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+Printing the new value of Ilambda0.0118346
+Radiation solver iter: 1
+DILUPBiCG:  Solving for ILambda_84_0, Initial residual = 1, Final residual = 1.6874e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_85_0, Initial residual = 1, Final residual = 2.24598e-15, No Iterations 1
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0122179
+DILUPBiCG:  Solving for ILambda_94_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_86_0, Initial residual = 1, Final residual = 2.68833e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_85_0, Initial residual = 1, Final residual = 2.24598e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_95_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+Printing the new value of Ilambda0.0120868
+Printing the new value of Ilambda0.0121549
+Printing the new value of Ilambda0.0118346
+Radiation solver iter: 1
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 0.573481, Final residual = 1.82088e-14, No Iterations 1
+Printing the new value of Ilambda0.0236107
+DILUPBiCG:  Solving for ILambda_87_0, Initial residual = 1, Final residual = 1.31329e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_86_0, Initial residual = 1, Final residual = 2.68833e-15, No Iterations 1
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.0120868
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 0.574217, Final residual = 3.68895e-15, No Iterations 1
+Printing the new value of Ilambda0.0236161
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 0.573481, Final residual = 1.82088e-14, No Iterations 1
+Printing the new value of Ilambda0.0236107
+DILUPBiCG:  Solving for ILambda_87_0, Initial residual = 1, Final residual = 1.31329e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_88_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+Printing the new value of Ilambda0.0120161
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 0.573575, Final residual = 2.03759e-14, No Iterations 1
+Printing the new value of Ilambda0.0236365
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 0.574217, Final residual = 3.68895e-15, No Iterations 1
+Printing the new value of Ilambda0.0236161
+DILUPBiCG:  Solving for ILambda_88_0, Initial residual = 1, Final residual = 6.27714e-09, No Iterations 3
+Printing the new value of Ilambda0.011964
+DILUPBiCG:  Solving for ILambda_89_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 0.571401, Final residual = 5.71995e-15, No Iterations 1
+Printing the new value of Ilambda0.023671
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 0.573575, Final residual = 2.03759e-14, No Iterations 1
+Printing the new value of Ilambda0.0236365
+DILUPBiCG:  Solving for ILambda_89_0, Initial residual = 1, Final residual = 1.21345e-07, No Iterations 3
+Printing the new value of Ilambda0.0119321
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 0.569146, Final residual = 8.9643e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_90_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+Printing the new value of Ilambda0.0237186
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 0.571401, Final residual = 5.71995e-15, No Iterations 1
+Printing the new value of Ilambda0.023671
+DILUPBiCG:  Solving for ILambda_90_0, Initial residual = 1, Final residual = 3.5228e-07, No Iterations 3
+Printing the new value of Ilambda0.0119032
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 0.566762, Final residual = 4.92072e-14, No Iterations 1
+Printing the new value of Ilambda0.0237776
+DILUPBiCG:  Solving for ILambda_91_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 0.569146, Final residual = 8.9643e-15, No Iterations 1
+DILUPBiCG:  Solving for ILambda_91_0, Initial residual = 1, Final residual = 5.15286e-07, No Iterations 3
+Printing the new value of Ilambda0.0237186
+Printing the new value of Ilambda0.0118783
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 0.564504, Final residual = 3.49676e-14, No Iterations 1
+Printing the new value of Ilambda0.0238459
+DILUPBiCG:  Solving for ILambda_92_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_92_0, Initial residual = 1, Final residual = 4.68e-07, No Iterations 3
+Printing the new value of Ilambda0.0118584
+Printing the new value of Ilambda0.0118584
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 0.566762, Final residual = 4.92072e-14, No Iterations 1
+Printing the new value of Ilambda0.0237776
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 0.562643, Final residual = 4.30616e-15, No Iterations 1
+Printing the new value of Ilambda0.023921
+DILUPBiCG:  Solving for ILambda_93_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+DILUPBiCG:  Solving for ILambda_93_0, Initial residual = 1, Final residual = 2.58593e-07, No Iterations 3
+Printing the new value of Ilambda0.0118442
+Printing the new value of Ilambda0.0118442
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 0.564504, Final residual = 3.49676e-14, No Iterations 1
+Printing the new value of Ilambda0.0238459
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 0.471504, Final residual = 1.99386e-08, No Iterations 3
+Printing the new value of Ilambda0.0240414
+DILUPBiCG:  Solving for ILambda_94_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+DILUPBiCG:  Solving for ILambda_94_0, Initial residual = 1, Final residual = 6.68587e-08, No Iterations 3
+Printing the new value of Ilambda0.0118362
+Printing the new value of Ilambda0.0118362
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 0.562643, Final residual = 4.30616e-15, No Iterations 1
+Printing the new value of Ilambda0.023921
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 0.39071, Final residual = 3.624e-07, No Iterations 3
+Printing the new value of Ilambda0.0242031
+DILUPBiCG:  Solving for ILambda_95_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+DILUPBiCG:  Solving for ILambda_95_0, Initial residual = 1, Final residual = 1.96777e-09, No Iterations 3
+Printing the new value of Ilambda0.0118346
+Printing the new value of Ilambda0.0118346
+Radiation solver iter: 1
+Radiation solver iter: 1
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 0.471504, Final residual = 1.99386e-08, No Iterations 3
+Printing the new value of Ilambda0.0240414
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 0.356889, Final residual = 9.46987e-07, No Iterations 3
+Printing the new value of Ilambda0.024359
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 0.39071, Final residual = 3.624e-07, No Iterations 3
+Printing the new value of Ilambda0.0242031
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 0.573481, Final residual = 1.82088e-14, No Iterations 1
+Printing the new value of Ilambda0.0236107
+DILUPBiCG:  Solving for ILambda_0_0, Initial residual = 0.573481, Final residual = 1.82088e-14, No Iterations 1
+Printing the new value of Ilambda0.0236107
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 0.356889, Final residual = 9.46987e-07, No Iterations 3
+Printing the new value of Ilambda0.024359
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 0.338901, Final residual = 2.79415e-08, No Iterations 4
+Printing the new value of Ilambda0.024503
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 0.326873, Final residual = 2.48714e-08, No Iterations 4
+Printing the new value of Ilambda0.024629
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 0.317982, Final residual = 7.99514e-07, No Iterations 3
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 0.311584, Final residual = 2.55287e-07, No Iterations 3
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 0.307261, Final residual = 1.25453e-08, No Iterations 3
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 0.307399, Final residual = 2.68525e-16, No Iterations 1
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 0.312186, Final residual = 1.73109e-16, No Iterations 1
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 0.319063, Final residual = 2.16804e-17, No Iterations 1
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 0.328482, Final residual = 7.96132e-17, No Iterations 1
+Printing the new value of Ilambda0.0246291
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 0.341184, Final residual = 3.82605e-16, No Iterations 1
+Printing the new value of Ilambda0.0245031
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 0.360196, Final residual = 6.9793e-17, No Iterations 1
+Printing the new value of Ilambda0.0243592
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 0.395509, Final residual = 1.21199e-15, No Iterations 1
+Printing the new value of Ilambda0.0242032
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 0.482574, Final residual = 2.57255e-15, No Iterations 1
+Printing the new value of Ilambda0.0240415
+DILUPBiCG:  Solving for ILambda_24_0, Initial residual = 0.590166, Final residual = 2.34394e-09, No Iterations 3
+Printing the new value of Ilambda0.0239211
+DILUPBiCG:  Solving for ILambda_25_0, Initial residual = 0.591387, Final residual = 4.63545e-08, No Iterations 3
+Printing the new value of Ilambda0.023846
+DILUPBiCG:  Solving for ILambda_26_0, Initial residual = 0.592221, Final residual = 1.38657e-07, No Iterations 3
+Printing the new value of Ilambda0.0237777
+DILUPBiCG:  Solving for ILambda_27_0, Initial residual = 0.592434, Final residual = 2.11361e-07, No Iterations 3
+Printing the new value of Ilambda0.0237187
+DILUPBiCG:  Solving for ILambda_28_0, Initial residual = 0.591313, Final residual = 2.02978e-07, No Iterations 3
+Printing the new value of Ilambda0.023671
+DILUPBiCG:  Solving for ILambda_29_0, Initial residual = 0.588891, Final residual = 1.22246e-07, No Iterations 3
+Printing the new value of Ilambda0.0236365
+DILUPBiCG:  Solving for ILambda_30_0, Initial residual = 0.58339, Final residual = 3.58276e-08, No Iterations 3
+Printing the new value of Ilambda0.0236161
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 0.574217, Final residual = 3.68895e-15, No Iterations 1
+Printing the new value of Ilambda0.0236161
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 0.573575, Final residual = 2.03759e-14, No Iterations 1
+Printing the new value of Ilambda0.0236365
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 0.571401, Final residual = 5.71995e-15, No Iterations 1
+Printing the new value of Ilambda0.023671
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 0.569146, Final residual = 8.9643e-15, No Iterations 1
+Printing the new value of Ilambda0.0237186
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 0.566762, Final residual = 4.92072e-14, No Iterations 1
+Printing the new value of Ilambda0.0237776
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 0.564504, Final residual = 3.49676e-14, No Iterations 1
+Printing the new value of Ilambda0.0238459
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 0.562643, Final residual = 4.30616e-15, No Iterations 1
+Printing the new value of Ilambda0.023921
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 0.471504, Final residual = 1.99386e-08, No Iterations 3
+Printing the new value of Ilambda0.0240414
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 0.39071, Final residual = 3.624e-07, No Iterations 3
+Printing the new value of Ilambda0.0242031
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 0.356889, Final residual = 9.46987e-07, No Iterations 3
+Printing the new value of Ilambda0.024359
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 0.338901, Final residual = 2.79415e-08, No Iterations 4
+Printing the new value of Ilambda0.024503
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 0.326873, Final residual = 2.48714e-08, No Iterations 4
+Printing the new value of Ilambda0.024629
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 0.317982, Final residual = 7.99514e-07, No Iterations 3
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 0.311584, Final residual = 2.55287e-07, No Iterations 3
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 0.307261, Final residual = 1.25453e-08, No Iterations 3
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 0.307399, Final residual = 2.68525e-16, No Iterations 1
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 0.312186, Final residual = 1.73109e-16, No Iterations 1
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 0.319063, Final residual = 2.16804e-17, No Iterations 1
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 0.328482, Final residual = 7.96132e-17, No Iterations 1
+Printing the new value of Ilambda0.0246291
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 0.341184, Final residual = 3.82605e-16, No Iterations 1
+Printing the new value of Ilambda0.0245031
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 0.360196, Final residual = 6.9793e-17, No Iterations 1
+Printing the new value of Ilambda0.0243592
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 0.395509, Final residual = 1.21199e-15, No Iterations 1
+Printing the new value of Ilambda0.0242032
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 0.482574, Final residual = 2.57255e-15, No Iterations 1
+Printing the new value of Ilambda0.0240415
+DILUPBiCG:  Solving for ILambda_1_0, Initial residual = 0.574217, Final residual = 3.68895e-15, No Iterations 1
+Printing the new value of Ilambda0.0236161
+DILUPBiCG:  Solving for ILambda_2_0, Initial residual = 0.573575, Final residual = 2.03759e-14, No Iterations 1
+Printing the new value of Ilambda0.0236365
+DILUPBiCG:  Solving for ILambda_3_0, Initial residual = 0.571401, Final residual = 5.71995e-15, No Iterations 1
+Printing the new value of Ilambda0.023671
+DILUPBiCG:  Solving for ILambda_4_0, Initial residual = 0.569146, Final residual = 8.9643e-15, No Iterations 1
+Printing the new value of Ilambda0.0237186
+DILUPBiCG:  Solving for ILambda_5_0, Initial residual = 0.566762, Final residual = 4.92072e-14, No Iterations 1
+Printing the new value of Ilambda0.0237776
+DILUPBiCG:  Solving for ILambda_6_0, Initial residual = 0.564504, Final residual = 3.49676e-14, No Iterations 1
+Printing the new value of Ilambda0.0238459
+DILUPBiCG:  Solving for ILambda_7_0, Initial residual = 0.562643, Final residual = 4.30616e-15, No Iterations 1
+Printing the new value of Ilambda0.023921
+DILUPBiCG:  Solving for ILambda_8_0, Initial residual = 0.471504, Final residual = 1.99386e-08, No Iterations 3
+Printing the new value of Ilambda0.0240414
+DILUPBiCG:  Solving for ILambda_9_0, Initial residual = 0.39071, Final residual = 3.624e-07, No Iterations 3
+Printing the new value of Ilambda0.0242031
+DILUPBiCG:  Solving for ILambda_10_0, Initial residual = 0.356889, Final residual = 9.46987e-07, No Iterations 3
+Printing the new value of Ilambda0.024359
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 0.338901, Final residual = 2.79415e-08, No Iterations 4
+Printing the new value of Ilambda0.024503
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 0.326873, Final residual = 2.48714e-08, No Iterations 4
+Printing the new value of Ilambda0.024629
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 0.317982, Final residual = 7.99514e-07, No Iterations 3
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 0.311584, Final residual = 2.55287e-07, No Iterations 3
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 0.307261, Final residual = 1.25453e-08, No Iterations 3
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 0.307399, Final residual = 2.68525e-16, No Iterations 1
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 0.312186, Final residual = 1.73109e-16, No Iterations 1
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 0.319063, Final residual = 2.16804e-17, No Iterations 1
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 0.328482, Final residual = 7.96132e-17, No Iterations 1
+Printing the new value of Ilambda0.0246291
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 0.341184, Final residual = 3.82605e-16, No Iterations 1
+Printing the new value of Ilambda0.0245031
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 0.360196, Final residual = 6.9793e-17, No Iterations 1
+Printing the new value of Ilambda0.0243592
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 0.395509, Final residual = 1.21199e-15, No Iterations 1
+Printing the new value of Ilambda0.0242032
+DILUPBiCG:  Solving for ILambda_11_0, Initial residual = 0.338901, Final residual = 2.79415e-08, No Iterations 4
+Printing the new value of Ilambda0.024503
+DILUPBiCG:  Solving for ILambda_12_0, Initial residual = 0.326873, Final residual = 2.48714e-08, No Iterations 4
+Printing the new value of Ilambda0.024629
+DILUPBiCG:  Solving for ILambda_13_0, Initial residual = 0.317982, Final residual = 7.99514e-07, No Iterations 3
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_14_0, Initial residual = 0.311584, Final residual = 2.55287e-07, No Iterations 3
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_15_0, Initial residual = 0.307261, Final residual = 1.25453e-08, No Iterations 3
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_16_0, Initial residual = 0.307399, Final residual = 2.68525e-16, No Iterations 1
+Printing the new value of Ilambda0.0248518
+DILUPBiCG:  Solving for ILambda_17_0, Initial residual = 0.312186, Final residual = 1.73109e-16, No Iterations 1
+Printing the new value of Ilambda0.0248073
+DILUPBiCG:  Solving for ILambda_18_0, Initial residual = 0.319063, Final residual = 2.16804e-17, No Iterations 1
+Printing the new value of Ilambda0.024732
+DILUPBiCG:  Solving for ILambda_19_0, Initial residual = 0.328482, Final residual = 7.96132e-17, No Iterations 1
+Printing the new value of Ilambda0.0246291
+DILUPBiCG:  Solving for ILambda_20_0, Initial residual = 0.341184, Final residual = 3.82605e-16, No Iterations 1
+Printing the new value of Ilambda0.0245031
+DILUPBiCG:  Solving for ILambda_21_0, Initial residual = 0.360196, Final residual = 6.9793e-17, No Iterations 1
+Printing the new value of Ilambda0.0243592
+DILUPBiCG:  Solving for ILambda_22_0, Initial residual = 0.395509, Final residual = 1.21199e-15, No Iterations 1
+Printing the new value of Ilambda0.0242032
+DILUPBiCG:  Solving for ILambda_23_0, Initial residual = 0.482574, Final residual = 2.57255e-15, No Iterations 1
+Printing the new value of Ilambda0.0240415
+DILUPBiCG:  Solving for ILambda_24_0, Initial residual = 0.590166, Final residual = 2.34394e-09, No Iterations 3
+Printing the new value of Ilambda0.0239211
+DILUPBiCG:  Solving for ILambda_25_0, Initial residual = 0.591387, Final residual = 4.63545e-08, No Iterations 3
+Printing the new value of Ilambda0.023846
+DILUPBiCG:  Solving for ILambda_26_0, Initial residual = 0.592221, Final residual = 1.38657e-07, No Iterations 3
+Printing the new value of Ilambda0.0237777
+DILUPBiCG:  Solving for ILambda_27_0, Initial residual = 0.592434, Final residual = 2.11361e-07, No Iterations 3
+Printing the new value of Ilambda0.0237187
+DILUPBiCG:  Solving for ILambda_28_0, Initial residual = 0.591313, Final residual = 2.02978e-07, No Iterations 3
+Printing the new value of Ilambda0.023671
+DILUPBiCG:  Solving for ILambda_29_0, Initial residual = 0.588891, Final residual = 1.22246e-07, No Iterations 3
+Printing the new value of Ilambda0.0236365
+DILUPBiCG:  Solving for ILambda_30_0, Initial residual = 0.58339, Final residual = 3.58276e-08, No Iterations 3
+Printing the new value of Ilambda0.0236161
+DILUPBiCG:  Solving for ILambda_31_0, Initial residual = 0.574699, Final residual = 9.50285e-07, No Iterations 2
+Printing the new value of Ilambda0.0236107

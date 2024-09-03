@@ -1,0 +1,27 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+echo
+#blockMesh
+echo "create the geometry from blockMeshDict......"
+(runApplication 'blockMesh -region zoneone' )
+(runApplication 'blockMesh -region zonetwo' )
+echo
+#topoSet
+echo "executing the topoSetDict ........."
+#(runApplication topoSet)
+echo
+#create Regions
+echo "splitting the meshe into the region ........"
+#(runApplication "splitMeshRegions -cellZones -overwrite") 
+echo
+echo "Changing the polymesh file, executing changeDictionaryDict ........"
+#(runApplication "changeDictionary -region zoneone") 
+#(runApplication "changeDictionary -region zonetwo") 
+echo
+# run application
+echo "running the application ......."
+runApplication $(getApplication)
+
+#------------------------------------------------------------------------------

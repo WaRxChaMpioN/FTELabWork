@@ -1,0 +1,19 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+echo
+#blockMesh
+echo "create the geometry from blockMeshDict......"
+(runApplication 'blockMesh -region zoneone' )
+(runApplication 'blockMesh -region zonetwo' )
+echo
+#run parallel
+echo running in parallel
+(runApplication 'decomposePar -region zoneone') 
+(runApplication 'decomposePar -region zonetwo')
+# run application
+echo "running the application ......."
+runApplication $(getApplication)
+
+#------------------------------------------------------------------------------

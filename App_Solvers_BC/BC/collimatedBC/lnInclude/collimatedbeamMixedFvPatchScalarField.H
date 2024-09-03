@@ -1,0 +1,1 @@
+../collimatedbeamMixedFvPatchScalarField.H

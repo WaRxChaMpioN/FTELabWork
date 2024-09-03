@@ -1,0 +1,5 @@
+SOURCE = \
+opaqueModels/oqfvDOM/oqfvDOM/oqfvDOM.C \
+opaqueModels/oqfvDOM/oqradiativeIntensityRay/oqradiativeIntensityRay.C \
+
+# sources

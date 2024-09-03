@@ -1,0 +1,33 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      changeDictionaryDict;
+    location    "system";
+}
+
+// Patch updates
+boundary
+{
+    zoneone_to_zonetwo
+    {
+        type            mappedPatch; // Change from mappedWall to mappedPatch
+        inGroups        1 ( one );
+        sampleRegion    zonetwo;
+        sampleMode      nearestPatchFace;
+        samplePatch     zonetwo_to_zoneone;
+        offsetMode      uniform;
+        offset          (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

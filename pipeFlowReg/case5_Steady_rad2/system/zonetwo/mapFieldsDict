@@ -1,0 +1,38 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      mapFieldds;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Source case directory
+sourceCase "~/Desktop/testMultiReg2/1/";
+
+// Region mapping
+region1 zone1;
+region2 zone2;
+
+// Interpolation scheme
+mapMethod cellVolumeWeight;
+
+// List of fields to map
+fields
+(
+    U
+    p
+    T
+    p_rgh
+);
+
+
+
+// ************************************************************************* //

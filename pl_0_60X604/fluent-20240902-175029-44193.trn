@@ -1,0 +1,501 @@
+Auto-Transcript Start Time:  17:50:29, 02 Sep 2024 
+Current Directory: "/home/warxchampion/Desktop/Scrap/pl_0_60X604"
+/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/bin/fluent -r22.2.0 3ddp -pshmem -host -alnamd64 -t1 -mpi=intel -path/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent -ssh -cx warxchampion:43815:42369
+Starting /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/lnamd64/3ddp_host/fluent.22.2.0 host -cx warxchampion:43815:42369 "(list (rpsetvar (QUOTE parallel/function) "fluent 3ddp -flux -node -alnamd64 -r22.2.0 -t1 -pshmem -mpi=intel -ssh") (rpsetvar (QUOTE parallel/rhost) "") (rpsetvar (QUOTE parallel/ruser) "") (rpsetvar (QUOTE parallel/nprocs_string) "1") (rpsetvar (QUOTE parallel/auto-spawn?) #t) (rpsetvar (QUOTE parallel/trace-level) 0) (rpsetvar (QUOTE parallel/remote-shell) 1) (rpsetvar (QUOTE parallel/path) "/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent") (rpsetvar (QUOTE parallel/hostsfile) "") (rpsetvar (QUOTE gpuapp/devices) ""))"
+
+              Welcome to ANSYS Fluent 2022 R2
+
+              Copyright 1987-2022 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 27 2022 08:43:47 EDT  Build Id: 10212  
+ 
+Connected License Server List:	1055@10.8.0.190
+
+     --------------------------------------------------------------
+     This is an academic version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "warxchampion" (unix).
+/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/bin/fluent -r22.2.0 3ddp -flux -node -alnamd64 -t1 -pshmem -mpi=intel -ssh -meshing -mport 127.0.1.1:127.0.1.1:46843:0
+Starting /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/multiport/mpi/lnamd64/intel2021/bin/mpirun --rsh=ssh -f /tmp/fluent-appfile.warxchampion.44654 -genv FI_PROVIDER tcp -genv FLUENT_ARCH lnamd64 -genv I_MPI_DEBUG 0 -genv I_MPI_ADJUST_REDUCE 2 -genv I_MPI_ADJUST_ALLREDUCE 2 -genv I_MPI_ADJUST_BCAST 8 -genv I_MPI_ADJUST_BARRIER 2 -genv I_MPI_ADJUST_ALLGATHER 2 -genv I_MPI_ADJUST_GATHER 2 -genv I_MPI_ADJUST_ALLTOALL 1 -genv I_MPI_ADJUST_SCATTER 2 -genv I_MPI_ADJUST_SCATTERV 2 -genv I_MPI_ADJUST_ALLGATHERV 2 -genv I_MPI_ADJUST_GATHERV 2 -genv I_MPI_PLATFORM auto -genv PYTHONHOME /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/../../commonfiles/CPython/3_7/linx64/Release/python -genv FLUENT_PROD_DIR /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0 -genv FLUENT_AFFINITY 0 -genv I_MPI_PIN enable -genv KMP_AFFINITY disabled -n 1 /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/lnamd64/3ddp_node/fluent_mpi.22.2.0 node -mpiw intel -pic shmem -mport 127.0.1.1:127.0.1.1:46843:0 -meshing
+
+---------------------------------------------------------------------------------
+ID    Hostname      Core  O.S.      PID    Vendor                               
+---------------------------------------------------------------------------------
+n0    warxchampion  1/16  Linux-64  44705  13th Gen Intel(R) Core(TM) i7-13700K 
+host  warxchampion        Linux-64  44442  13th Gen Intel(R) Core(TM) i7-13700K 
+
+MPI Option Selected: intel
+---------------------------------------------------------------------------------
+
+Cleanup script file is /home/warxchampion/Desktop/Scrap/pl_0_60X604/cleanup-fluent-warxchampion-44442.sh
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Posting ANSYS Product Improvement Program startup data
+Done.
+
+Meshing> (cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Task Page)*Table1*Table3(Solution)*PushButton1(Switch to Solution)")
+(cx-gui-do cx-activate-item "Question*OK")
+/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/bin/fluent -r22.2.0 3ddp -flux -node -alnamd64 -t3 -pshmem -mpi=intel -ssh -auto_spawn -meshing -connect tag#0$connentry#020096F3AC1214AE0000000000000000$
+Starting /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/multiport/mpi/lnamd64/intel2021/bin/mpirun --rsh=ssh -f /tmp/fluent-appfile.warxchampion.45968 -genv FI_PROVIDER tcp -genv FLUENT_ARCH lnamd64 -genv I_MPI_DEBUG 0 -genv I_MPI_ADJUST_REDUCE 2 -genv I_MPI_ADJUST_ALLREDUCE 2 -genv I_MPI_ADJUST_BCAST 8 -genv I_MPI_ADJUST_BARRIER 2 -genv I_MPI_ADJUST_ALLGATHER 2 -genv I_MPI_ADJUST_GATHER 2 -genv I_MPI_ADJUST_ALLTOALL 1 -genv I_MPI_ADJUST_SCATTER 2 -genv I_MPI_ADJUST_SCATTERV 2 -genv I_MPI_ADJUST_ALLGATHERV 2 -genv I_MPI_ADJUST_GATHERV 2 -genv I_MPI_PLATFORM auto -genv PYTHONHOME /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/../../commonfiles/CPython/3_7/linx64/Release/python -genv FLUENT_PROD_DIR /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0 -genv FLUENT_AFFINITY 0 -genv I_MPI_PIN enable -genv KMP_AFFINITY disabled -n 3 /home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/lnamd64/3ddp_node/fluent_mpi.22.2.0 node -mpiw intel -pic shmem -meshing -connect tag#0$connentry#020096F3AC1214AE0000000000000000$
+
+--------------------------------------------------------------------------------
+ID   Hostname      Core  O.S.      PID    Vendor                               
+--------------------------------------------------------------------------------
+n3   warxchampion  4/16  Linux-64  46021  13th Gen Intel(R) Core(TM) i7-13700K 
+n2   warxchampion  3/16  Linux-64  46020  13th Gen Intel(R) Core(TM) i7-13700K 
+n1*  warxchampion  2/16  Linux-64  46019  13th Gen Intel(R) Core(TM) i7-13700K 
+n0   warxchampion  1/16  Linux-64  44705  13th Gen Intel(R) Core(TM) i7-13700K 
+
+MPI Option Selected: intel
+Selected system interconnect: shared-memory
+--------------------------------------------------------------------------------
+
+Cleanup script file is /home/warxchampion/Desktop/Scrap/pl_0_60X604/cleanup-fluent-warxchampion-44442.sh
+No volume mesh in TGrid to transfer(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)
+(newline)
+
+
+> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "/home/warxchampion/Shubhankar_hpc/Re1000.cas.h5") "CFF Case Files (*.cas.h5 *.msh.h5 *.MSH.h5 )")
+Fast-loading "/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/addons/afd/lib/hdfio.bin"
+Done.
+WARNING: Rank:0 Machine warxchampion has 32 % of RAM filled with file buffer caches.
+This can cause potential performance issues. Please use -cflush flag to flush the cache. 
+
+
+Reading from warxchampion:"/home/warxchampion/Shubhankar_hpc/Re1000.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+     1434808 cells,     2 cell zones ...
+         522261 tetrahedral cells,  zone id: 20
+         912547 tetrahedral cells,  zone id: 21
+     2996874 faces,    22 face zones ...
+          13856 triangular wall faces,  zone id: 4
+              1 triangular wall face ,  zone id: 3
+              1 triangular wall face ,  zone id: 9
+              1 triangular wall face ,  zone id: 2
+              1 triangular wall face ,  zone id: 8
+         994735 triangular interior faces,  zone id: 22
+        1747623 triangular interior faces,  zone id: 23
+          82652 triangular wall faces,  zone id: 24
+          82652 triangular wall faces,  zone id: 12
+           1027 triangular velocity-inlet faces,  zone id: 25
+           1374 triangular outflow faces,  zone id: 26
+          16196 triangular wall faces,  zone id: 27
+          32502 triangular wall faces,  zone id: 28
+              1 triangular wall face ,  zone id: 29
+           1194 triangular velocity-inlet faces,  zone id: 30
+           5386 triangular wall faces,  zone id: 31
+           2759 triangular wall faces,  zone id: 32
+           2635 triangular wall faces,  zone id: 33
+           3116 triangular wall faces,  zone id: 34
+           3116 triangular wall faces,  zone id: 11
+           3023 triangular wall faces,  zone id: 35
+           3023 triangular wall faces,  zone id: 10
+      303753 nodes,     1 node zone  ...
+Warning: reading 24 partition grid onto 4 compute node machine.
+         Combining every 6 partitions.
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		pairs....,
+		parts....,
+		faces....,
+		nodes....,
+		shadow nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 230413/3715 = 62.0223
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	bottom_wall:003-shadow
+	upper_wall:002-shadow
+	bottom_wall:004
+	bottom_wall:003
+	upper_wall:002
+	solid_bottom_wall
+	solid_upper_wall
+	solid_side_walls
+	inlet
+	bottom_wall
+	side_walls
+	upper_wall
+	inlet_window
+	int_fluid
+	int_solid
+	outlet
+	solid_outlet
+	solid_outlet-shadow
+	solid_inlet
+	solid_inlet-shadow
+	fam0
+	fam0-shadow
+	fluid
+	solid
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Mesh Interfaces"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Mesh Interfaces"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Mesh Interfaces"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0 1))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0 1 2))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0 1 2 3))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0 1 2 3 4))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0 1 2 3 4 5))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-set-list-selections "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1" '( 0 1 2 3 4 5 6))
+(cx-gui-do cx-activate-item "Mesh Interfaces*Table1*Table2(Boundary Zones)*List1")
+(cx-gui-do cx-activate-item "Mesh Interfaces*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Reference Frames"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Reference Frames"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Reference Frames"))
+(cx-gui-do cx-activate-tab-index "Reference Frame*Table1*Frame6" 0)
+(cx-gui-do cx-activate-tab-index "Reference Frame*Table1*Frame6" 1)
+(cx-gui-do cx-activate-tab-index "Reference Frame*Table1*Frame6" 0)
+(cx-gui-do cx-activate-tab-index "Reference Frame*Table1*Frame6" 2)
+(cx-gui-do cx-activate-tab-index "Reference Frame*Table1*Frame6" 0)
+(cx-gui-do cx-activate-item "Reference Frame*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Dynamic Mesh"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Setup|Reference Frames|global""Setup|Reference Frames""Setup|Named Expressions""Setup|Curvillinear Coordinate System""Solution|Methods""Solution|Controls""Solution|Report Definitions""Solution|Monitors""Solution|Cell Registers""Solution|Automatic Mesh Adaption""Solution|Initialization""Solution|Calculation Activities""Solution|Run Calculation""Results|Surfaces""Results|Graphics""Results|Plots""Results|Animations""Results|Reports""Solution""Results""Parameters & Customization""Simulation Reports"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list ))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "/home/warxchampion/Desktop/myRe1000.cas.h5") "CFF Case Files (*.cas.h5 *.msh.h5 *.MSH.h5 )")
+WARNING: Rank:0 Machine warxchampion has 30 % of RAM filled with file buffer caches.
+This can cause potential performance issues. Please use -cflush flag to flush the cache. 
+
+
+       Clearing partially read grid.
+
+Reading from warxchampion:"/home/warxchampion/Desktop/myRe1000.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+     1434808 cells,     2 cell zones ...
+         522261 tetrahedral cells,  zone id: 20
+         912547 tetrahedral cells,  zone id: 21
+     2996874 faces,    22 face zones ...
+          13856 triangular wall faces,  zone id: 4
+              1 triangular wall face ,  zone id: 3
+              1 triangular wall face ,  zone id: 9
+              1 triangular wall face ,  zone id: 2
+              1 triangular wall face ,  zone id: 8
+         994735 triangular interior faces,  zone id: 22
+        1747623 triangular interior faces,  zone id: 23
+          82652 triangular wall faces,  zone id: 24
+          82652 triangular wall faces,  zone id: 12
+           1027 triangular velocity-inlet faces,  zone id: 25
+           1374 triangular outflow faces,  zone id: 26
+          16196 triangular wall faces,  zone id: 27
+          32502 triangular wall faces,  zone id: 28
+              1 triangular wall face ,  zone id: 29
+           1194 triangular velocity-inlet faces,  zone id: 30
+           5386 triangular wall faces,  zone id: 31
+           2759 triangular wall faces,  zone id: 32
+           2635 triangular wall faces,  zone id: 33
+           3116 triangular wall faces,  zone id: 34
+           3116 triangular wall faces,  zone id: 11
+           3023 triangular wall faces,  zone id: 35
+           3023 triangular wall faces,  zone id: 10
+      303753 nodes,     1 node zone  ...
+Warning: reading 24 partition grid onto 4 compute node machine.
+         Combining every 6 partitions.
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		pairs....,
+		parts....,
+		faces....,
+		nodes....,
+		shadow nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 230413/3715 = 62.0223
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	bottom_wall:003-shadow
+	upper_wall:002-shadow
+	bottom_wall:004
+	bottom_wall:003
+	upper_wall:002
+	solid_bottom_wall
+	solid_upper_wall
+	solid_side_walls
+	inlet
+	bottom_wall
+	side_walls
+	upper_wall
+	inlet_window
+	int_fluid
+	int_solid
+	outlet
+	solid_outlet
+	solid_outlet-shadow
+	solid_inlet
+	solid_inlet-shadow
+	fam0
+	fam0-shadow
+	fluid
+	solid
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-real-entry-list "Solution Controls*Table1*Table1*Table5(Under-Relaxation Factors)*RealEntry1(Pressure)" '( 0.1))
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table1*Table5(Under-Relaxation Factors)*RealEntry1(Pressure)")
+(cx-gui-do cx-set-real-entry-list "Solution Controls*Table1*Table1*Table5(Under-Relaxation Factors)*RealEntry4(Momentum)" '( 0.5))
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table1*Table5(Under-Relaxation Factors)*RealEntry4(Momentum)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)" '( 3))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)" '( 1))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)" '( 3))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table2(Pressure-Velocity Coupling)*DropDownList1(Scheme)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-real-entry-list "Solution Controls*Table1*Table1*Table7(Pseudo Time Explicit Relaxation Factors)*RealEntry1(Pressure)" '( 0.1))
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table1*Table7(Pseudo Time Explicit Relaxation Factors)*RealEntry1(Pressure)")
+(cx-gui-do cx-set-real-entry-list "Solution Controls*Table1*Table1*Table7(Pseudo Time Explicit Relaxation Factors)*RealEntry2(Momentum)" '( 0.3))
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table1*Table7(Pseudo Time Explicit Relaxation Factors)*RealEntry2(Momentum)")
+(cx-gui-do cx-set-real-entry-list "Solution Controls*Table1*Table1*Table7(Pseudo Time Explicit Relaxation Factors)*RealEntry5(Energy)" '( 0.95))
+(cx-gui-do cx-activate-item "Solution Controls*Table1*Table1*Table7(Pseudo Time Explicit Relaxation Factors)*RealEntry5(Energy)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Initialization"))
+(cx-gui-do cx-activate-item "Solution Initialization*Table1*Frame9*PushButton1(Initialize)")
+(cx-gui-do cx-activate-item "Question*OK")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList3(Momentum)" '( 1))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList3(Momentum)")
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList2(Pressure)" '( 1))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList2(Pressure)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Controls"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Methods"))
+(cx-gui-do cx-set-list-selections "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList2(Pressure)" '( 1))
+(cx-gui-do cx-activate-item "Solution Methods*Table1*Table3(Spatial Discretization)*DropDownList2(Pressure)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-activate-item "NavigationPane*Frame2*Table1*List_Tree2")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*Frame2*Table1*List_Tree2" (list "Solution|Run Calculation"))
+(cx-gui-do cx-set-expression-entry "Run Calculation*Table1*Table2(Pseudo Time Settings)*Table1(Fluid Time Scale)*Table3*ExpressionEntry2(Time Scale Factor)" '("10" . 0))
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table2(Pseudo Time Settings)*Table1(Fluid Time Scale)*Table3*ExpressionEntry2(Time Scale Factor)")
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table1*Table1*PushButton1(Check Case)")
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 3)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 0)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 4)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 0)
+
+Checking the case set-up ...
+
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 1)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 2)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 3)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 4)
+(cx-gui-do cx-activate-tab-index "Case Check*Table1*Frame1" 0)
+
+Done
+
+No recommendations to make at this time.
+(cx-gui-do cx-activate-item "Information*OK")
+(cx-gui-do cx-activate-item "Run Calculation*Table1*Table6(Solution Advancement)*Table1*PushButton1(Calculate)")
+
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy     time/iter
+
+ Opening library "/home/warxchampion/Desktop/myAnsys/ansys_inc/v222/fluent/fluent22.2.0/addons/montecarlo/lnamd64/3ddp_node/CFXRadAPI"...
+ done.
+ Linking to library symbols ...
+
+Calling Monte Carlo method...
+     1  1.0000e+00  4.8835e-03  8.2803e-04  8.5275e-04  1.8465e-06 1169:30:17  999
+     2  9.7856e-01  6.6327e-03  3.5787e-03  3.5879e-03  2.3820e-05 936:31:01  998
+     3  9.7305e-01  6.4493e-03  5.2686e-03  5.2641e-03  5.0484e-06 750:22:13  997
+     4  9.4945e-01  5.7766e-03  4.9988e-03  4.9919e-03  2.1430e-06 601:56:57  996
+Calling Monte Carlo method...
+     5  9.5615e-01  5.5806e-03  5.3749e-03  5.3681e-03  2.6324e-06 706:13:12  995
+     6  9.6369e-01  5.2539e-03  5.4062e-03  5.4018e-03  1.5293e-06 566:11:06  994
+     7  9.5542e-01  4.8773e-03  5.1513e-03  5.1474e-03  1.1580e-06 454:20:55  993
+     8  9.3401e-01  4.4797e-03  4.8518e-03  4.8490e-03  6.5760e-07 365:11:20  992
+     9  9.1761e-01  4.1804e-03  4.6710e-03  4.6672e-03  6.3042e-07 293:26:59  991
+Calling Monte Carlo method...
+    10  8.9953e-01  3.8755e-03  4.4094e-03  4.4037e-03  6.3507e-07 450:05:34  990
+    11  8.6929e-01  3.5342e-03  4.0293e-03  4.0235e-03  1.0186e-06 361:05:32  989
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy     time/iter
+    12  8.5704e-01  3.3582e-03  3.9698e-03  3.9614e-03  5.7190e-07 289:50:55  988
+    13  8.2540e-01  3.0304e-03  3.5235e-03  3.5156e-03  4.5617e-07 232:56:38  987
+    14  8.2371e-01  2.9673e-03  3.6076e-03  3.5960e-03  5.5976e-07 187:19:30  986
+Calling Monte Carlo method...
+    15  7.9823e-01  2.6951e-03  3.2017e-03  3.1901e-03  5.0922e-07 357:43:33  985
+    16  7.9225e-01  2.6240e-03  3.2248e-03  3.2099e-03  1.1643e-06 286:18:57  984
+    17  7.5939e-01  2.3566e-03  2.7996e-03  2.7867e-03  4.1857e-07 229:08:01  983
+    18  7.3784e-01  2.2350e-03  2.7051e-03  2.6915e-03  3.5717e-07 183:24:18  982
+    19  7.1349e-01  2.0910e-03  2.5064e-03  2.4954e-03  2.7077e-07 146:53:03  981
+Calling Monte Carlo method...
+    20  7.0391e-01  2.0587e-03  2.5259e-03  2.5139e-03  5.3077e-07 332:20:42  980
+    21  6.6539e-01  1.8198e-03  2.1143e-03  2.1038e-03  7.0454e-07 266:48:01  979
+    22  6.6758e-01  1.9139e-03  2.3554e-03  2.3440e-03  5.1269e-07 214:26:16  978
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy     time/iter
+    23  6.5581e-01  1.8172e-03  2.1916e-03  2.1827e-03  3.4220e-07 172:34:03  977
+    24  6.3093e-01  1.6725e-03  1.9729e-03  1.9641e-03  2.8264e-07 139:10:14  976
+Calling Monte Carlo method...
+    25  6.3012e-01  1.7198e-03  2.0811e-03  2.0712e-03  4.8542e-07 329:36:00  975
+    26  6.1357e-01  1.6163e-03  1.9073e-03  1.8979e-03  4.4109e-07 264:22:10  974
+    27  6.0042e-01  1.5634e-03  1.8353e-03  1.8257e-03  3.1664e-07 212:19:50  973
+    28  6.1592e-01  1.7037e-03  2.0768e-03  2.0642e-03  5.4125e-07 170:38:49  972
+    29  5.8232e-01  1.4431e-03  1.6318e-03  1.6235e-03  3.3232e-07 137:13:13  971
+Calling Monte Carlo method...
+    30  5.7147e-01  1.4381e-03  1.6739e-03  1.6639e-03  3.3272e-07 318:27:56  970
+    31  5.6242e-01  1.4097e-03  1.6347e-03  1.6240e-03  4.5691e-07 255:35:28  969
+    32  5.5185e-01  1.3715e-03  1.5840e-03  1.5726e-03  2.7658e-07 205:16:11  968
+    33  5.5380e-01  1.4066e-03  1.6508e-03  1.6347e-03  3.1308e-07 164:50:49  967
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy     time/iter
+    34  5.4293e-01  1.3282e-03  1.5356e-03  1.5187e-03  1.9835e-07 132:32:47  966
+Calling Monte Carlo method...
+    35  5.3851e-01  1.3156e-03  1.5364e-03  1.5178e-03  3.1586e-07 306:46:30  965
+    36  5.2403e-01  1.2360e-03  1.4141e-03  1.3954e-03  2.8885e-07 246:10:16  964
+    37  5.1218e-01  1.1945e-03  1.3629e-03  1.3420e-03  2.1345e-07 197:46:21  963
+    38  5.1180e-01  1.2280e-03  1.4165e-03  1.3897e-03  2.6891e-07 159:04:02  962
+    39  5.1093e-01  1.2217e-03  1.4172e-03  1.3882e-03  2.1257e-07 128:06:41  961
+Calling Monte Carlo method...
+    40  4.9876e-01  1.1493e-03  1.2983e-03  1.2739e-03  2.7437e-07 314:42:30  960
+    41  5.0391e-01  1.2097e-03  1.4026e-03  1.3722e-03  3.1164e-07 252:18:01  959
+    42  4.8704e-01  1.1026e-03  1.2205e-03  1.1965e-03  2.3565e-07 202:25:20  958
+    43  4.8836e-01  1.1466e-03  1.3032e-03  1.2721e-03  2.2885e-07 162:33:35  957
+    44  4.7920e-01  1.0966e-03  1.2136e-03  1.1927e-03  1.8487e-07 130:45:12  956
+Calling Monte Carlo method...
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy     time/iter
+    45  4.7971e-01  1.1264e-03  1.2667e-03  1.2426e-03  2.9995e-07 313:14:35  955
+    46  4.7550e-01  1.1015e-03  1.2247e-03  1.2011e-03  2.4197e-07 251:13:37  954
+    47  4.6606e-01  1.0436e-03  1.1442e-03  1.1248e-03  1.7713e-07 201:43:06  953
+    48  4.6704e-01  1.0702e-03  1.1923e-03  1.1689e-03  2.0668e-07 162:03:37  952
+    49  4.6150e-01  1.0438e-03  1.1530e-03  1.1330e-03  1.6399e-07 130:22:36  951

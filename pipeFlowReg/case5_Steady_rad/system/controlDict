@@ -1,0 +1,75 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     chtMultiRegionSimpleFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         10000;
+
+deltaT          01;
+
+writeControl    adjustableRunTime;
+
+writeInterval   1;
+
+purgeWrite      0;
+
+writeFormat     binary;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+maxCo           1.0;
+
+maxDi           10.0;
+
+adjustTimeStep  yes;
+
+regions (  zoneone porousBlockage zonetwo );
+
+// ************************************************************************* //
+
+DebugSwitches
+{
+    // fvPatchField        1;
+    // fvPatchScalarField  1;
+    // mappedPatchBase 1;
+    // // syncObjects     1;
+    // regIOobject     2;
+}
+
+/*
+functions
+{
+  #includeFunc cellMaxHeaterT
+  #includeFunc cellMaxMetalT
+  #includeFunc volAvgHeaterT
+  #includeFunc volAvgMetalT
+  #includeFunc volAvgInterfac
+}
