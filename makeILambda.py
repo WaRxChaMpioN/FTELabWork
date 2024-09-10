@@ -30,10 +30,10 @@ def make_ILambda(input_folder, file_name, destination_folder, num_copies):
 
 
 # Example usage
-input_file_zoneone = 'case5_Steady_rad_sir2/0/zoneone'
-destination_folder_zoneone = 'case5_Steady_rad_sir2/0/zoneone'
-input_file_zonetwo = 'case5_Steady_rad_sir2/0/zonetwo'
-destination_folder_zonetwo = 'case5_Steady_rad_sir2/0/zonetwo'
+input_file_zoneone = '0/zoneone'
+destination_folder_zoneone = '0/zoneone'
+input_file_zonetwo = '0/zonetwo'
+destination_folder_zonetwo = '0/zonetwo'
 num_copies_zoneone = 64
 num_copies_zonetwo = 64
 file_name = 'ILambda'
