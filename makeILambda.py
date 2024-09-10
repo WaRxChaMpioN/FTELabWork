@@ -28,14 +28,25 @@ def make_ILambda(input_folder, file_name, destination_folder, num_copies):
         shutil.copy(input_file, destination_file)
         print(f"Created copy: {destination_file}")
 
+    # Delete any remaining ILambda_{i}_0 files beyond the required number
+    i = num_copies + 1
+    while True:
+        remaining_file = os.path.join(destination_folder, f"ILambda_{i}_0")
+        if os.path.exists(remaining_file):
+            os.remove(remaining_file)
+            print(f"Deleted remaining file: {remaining_file}")
+            i += 1
+        else:
+            break
+
 
 # Example usage
 input_file_zoneone = '0/zoneone'
 destination_folder_zoneone = '0/zoneone'
 input_file_zonetwo = '0/zonetwo'
 destination_folder_zonetwo = '0/zonetwo'
-num_copies_zoneone = 64
-num_copies_zonetwo = 64
+num_copies_zoneone = 32
+num_copies_zonetwo = 32
 file_name = 'ILambda'
 
 make_ILambda(input_file_zoneone, file_name, destination_folder_zoneone, num_copies_zoneone)
