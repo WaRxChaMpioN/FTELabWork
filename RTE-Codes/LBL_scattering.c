@@ -35,38 +35,38 @@ int main()
 	s = (double*)calloc(N,sizeof(double*));
 		fptr2= fopen("kappa1e5.dat","r");
 		fptr3= fopen("sigma1e5.dat","r");
-	       fp5=fopen("co2_k_1000_005.dat","r");
+	    fp5=fopen("co2_k_1000_005.dat","r");
 
 
 	//fptr = fopen("K_H2O1000_particle505e_2.dat", "r");
 	fptr = fopen("H2O_k_1000_010.dat", "r");
 	fptr1 = fopen("s_1000.dat", "r"); // "w" defines "writing mode"
         for (d = 1; d<=N; d++) 
-	{
-              fscanf(fptr,"%lf", &k[d]);
-              fscanf(fp5,"%lf", &k1[d]);
-	       fscanf(fptr1,"%lf", &w[d]);
+		{
+            fscanf(fptr,"%lf", &k[d]);
+            fscanf(fp5,"%lf", &k1[d]);
+	       	fscanf(fptr1,"%lf", &w[d]);
         }
       	for (d = 1; d<(N-90000); d++) // kp length
-	{
-               fscanf(fptr2,"%lf", &kp[d]);
-               fscanf(fptr3,"%lf", &s[d]);
-		s[d]=100*s[d];
-		//s[d]=0;
-		//k[d]=0;//100*(k[d] + k1[d]) + kp[d];    // absorption in cm^-1
+		{
+            fscanf(fptr2,"%lf", &kp[d]);
+            fscanf(fptr3,"%lf", &s[d]);
+			s[d]=100*s[d];
+			//s[d]=0;
+			//k[d]=0;//100*(k[d] + k1[d]) + kp[d];    // absorption in cm^-1
         }
 	        
 	        for (d = (N-90000); d<=N; d++) 
-		s[d]=0;
+				s[d]=0;
         
 	
         
         
         
-        fclose(fptr);
+    fclose(fptr);
 	fclose(fptr1);
-		fclose(fptr2);
-		fclose(fptr3);
+	fclose(fptr2);
+	fclose(fptr3);
 	PI = 4.0*atan(1.0);
 	for(d=1;d<=N;d++)
 	{
@@ -85,132 +85,130 @@ int main()
 	dy=1.0/(nj-2.0);
 	dtheta=PI/(nt);
 	dphi=2.0*PI/np;	
+	
 		D_x=(double *)malloc((nt*np)*sizeof(double));
 		D_y=(double *)malloc((nt*np)*sizeof(double));
 		D_omega=(double *)malloc((nt*np)*sizeof(double));
 		for(l=0;l<nt;l++)
-			{
-			 theta=dtheta*(l+0.5);
-			 for(m=0;m<np;m++)
-			 	{
-				 phi=dphi*(m+0.5);
-				 *(D_x+np*l+m)=cos(phi)*sin(dphi/2.0)*(dtheta-cos(2.0*theta)*sin(dtheta));
-				 *(D_y+np*l+m)=sin(phi)*sin(dphi/2.0)*(dtheta-cos(2.0*theta)*sin(dtheta));
-				 *(D_omega+np*l+m)=2.0*dphi*sin(theta)*sin(dtheta/2.0);
-		  	 }
-			}
+		{
+			theta=dtheta*(l+0.5);
+		 	for(m=0;m<np;m++)
+		 	{
+			 	phi=dphi*(m+0.5);
+				*(D_x+np*l+m)=cos(phi)*sin(dphi/2.0)*(dtheta-cos(2.0*theta)*sin(dtheta));
+			 	*(D_y+np*l+m)=sin(phi)*sin(dphi/2.0)*(dtheta-cos(2.0*theta)*sin(dtheta));
+			 	*(D_omega+np*l+m)=2.0*dphi*sin(theta)*sin(dtheta/2.0);
+	  	 	}
+		}
 			
-				for(l=0;l<nt;l++)
-					for(m=0;m<np;m++)
-						for(j=1;j<nj-1;j++)
-							for(i=1;i<ni-1;i++)
-							{
-													Int_new[i][j][l][m]=0;//1123.479;
-													S[i][j][l][m]=0;
-                					B[i][j][l][m]=0;
-                					as[i][j][l][m]=0;
-                					Iold[i][j][l][m]=0;
-							}
+		for(l=0;l<nt;l++)
+			for(m=0;m<np;m++)
+				for(j=1;j<nj-1;j++)
+					for(i=1;i<ni-1;i++)
+					{
+						Int_new[i][j][l][m]=0;//1123.479;
+						S[i][j][l][m]=0;
+
+                		B[i][j][l][m]=0;
+            			as[i][j][l][m]=0;
+        				Iold[i][j][l][m]=0;
+					}
 							
 								
-			time_t begin = time(NULL);
+		time_t begin = time(NULL);
+						
 		for(d=1;d<=N;d++)				//Start of absorption coefficient
-	{	
-  //(sigma*pow(Tg,4))/PI;
+		{	
+  			//(sigma*pow(Tg,4))/PI;
 
   
-  	   // intitalisation
-				//////////////////////////////////////////////////    Boundary Conditions /////////////////////////////////////////////////////////////////////////////////////
+  	   		// intitalisation
+					//////////////////////////////////////////////////    Boundary Conditions /////////////////////////////////////////////////////////////////////////////////////
 						
 							
 			for(i=1;i<ni-1;i++)							//Bottom Wall
-				{
-				
-						 
+			{
 				for(l=0;l<nt;l++)
 					for(m=0;m<np/2;m++)
 						Int_new[i][0][l][m]=w[d]*(sigma*pow(Tb,4))/PI;//-Int_new[i][1][l][m];
 							
-				}
+			}
 			
 			for(i=1;i<ni-1;i++)							//Top Wall
-				{
+			{
 				
 						 
 				for(l=0;l<nt;l++)
 					for(m=np/2;m<np;m++)
 						Int_new[i][nj-1][l][m]=w[d]*(sigma*pow(Tt,4))/PI;//-Int_new[i][nj-2][l][m];
 						
-				}
+			}
 			
 			for(j=1;j<nj-1;j++)							//Left Wall
-				{
+			{
 				
 						
 				for(l=0;l<nt;l++)
-				    {
+				{
 					for(m=0;m<np/4;m++)
 						Int_new[0][j][l][m]=w[d]*(sigma*pow(Tl,4))/PI;//-Int_new[1][j][l][m];
+
 					for(m=3*np/4;m<np;m++)
 						Int_new[0][j][l][m]=w[d]*(sigma*pow(Tl,4))/PI;//-Int_new[1][j][l][m];
-				    }
-							
 				}
+							
+			}
 			
 			for(j=1;j<nj-1;j++)							//Right Wall
-				{
-				 
-						 
+			{
+				 			 
 				for(l=0;l<nt;l++)
 					for(m=np/4;m<3*np/4;m++)
 						Int_new[ni-1][j][l][m]=w[d]*(sigma*pow(Tr,4))/PI;//-Int_new[ni-2][j][l][m];
 							
-				}
+			}
 								
 						
 
 			do                     // to check convergence
 			{									
 			
-	     for(l=0;l<nt;l++)
-                for(m=0;m<np;m++)
-                    for(j=1;j<nj-1;j++)
-                        for(i=1;i<ni-1;i++)
-                        {
-                            //S[i][j][l][m]=0;// to fullfill convergence criteria frm chai and patankar					
- 				Iold[i][j][l][m]=Int_new[i][j][l][m];
-                         }
+	     		for(l=0;l<nt;l++)
+                	for(m=0;m<np;m++)
+                    	for(j=1;j<nj-1;j++)
+                        	for(i=1;i<ni-1;i++)
+                        	{
+                            	//S[i][j][l][m]=0;// to fullfill convergence criteria frm chai and patankar					
+ 								Iold[i][j][l][m]=Int_new[i][j][l][m];
+                         	}
 
 
 	
-			  for(l=0;l<nt;l++)                              //InScattering Integral Calculation
-			  	for(m=0;m<np;m++)
-			  		for(j=1;j<nj-1;j++)
-						for(i=1;i<ni-1;i++)			
-						{
-						S[i][j][l][m]=0;				
-							for(l1=0;l1<nt;l1++)
-                            {
-                                for(m1=0;m1<np;m1++)
-                                {
+			  	for(l=0;l<nt;l++)                              //InScattering Integral Calculation
+			  		for(m=0;m<np;m++)
+			  			for(j=1;j<nj-1;j++)
+							for(i=1;i<ni-1;i++)			
+							{
+								S[i][j][l][m]=0;				
+								for(l1=0;l1<nt;l1++)
+                            	{
+                            		for(m1=0;m1<np;m1++)
+                            		{
+                            			if(l1==l && m1==m)
+                            			{
+                                			B[i][j][l][m]=(*(D_omega+np*l1+m1))*(s[d]/(4*PI));
+                            				//B[i][j][l][m]=0;
+                            			}                                			
+										else
+                            			{
+                                    		//S[i][j][l][m]=0;
+                                   	 		S[i][j][l][m]+=(*(D_omega+np*l1+m1))*(s[d]/(4*PI))*Int_new[i][j][l1][m1];
+                                		}
+                                	}
+                            	}	 
+							}
 
-      
-
-                                if(l1==l && m1==m)
-                                {
-                                    B[i][j][l][m]=(*(D_omega+np*l1+m1))*(s[d]/(4*PI));
-                                	//B[i][j][l][m]=0;
-                                }
-                                else
-                                {
-                                    //S[i][j][l][m]=0;
-                                    S[i][j][l][m]+=(*(D_omega+np*l1+m1))*(s[d]/(4*PI))*Int_new[i][j][l1][m1];
-                                }
-                                }
-                            } 
-								}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 								  
 
 
@@ -219,29 +217,32 @@ int main()
 						 for(j=1;j<nj-1;j++)
 						 	for(i=1;i<ni-1;i++)
 								{
-								 Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i-1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j-1][l][m]);
-								 Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-								 Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-							 	 //Iold[i][j][l][m]=Int_new[i][j][l][m];
-			//count+=1;
+								 	Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i-1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j-1][l][m]);
+									Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+								 	Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+							 	 	//Iold[i][j][l][m]=Int_new[i][j][l][m];
+					
+									//count+=1;
 			
-								 Int_new[i][j][l][m]=(Nume+Source)/Deno;
-								 //rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/Int_new[i][j][l][m];
+								 	Int_new[i][j][l][m]=(Nume+Source)/Deno;
+								 	//rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/Int_new[i][j][l][m];
 								 }
-//printf("%d",count);
-//exit(0);
+
+				//printf("%d",count);
+				//exit(0);
+
 				for(l=0;l<nt;l++)
 					for(m=np/4;m<np/2;m++)
 						 for(j=1;j<nj-1;j++)
 						 	for(i=ni-2;i>=1;i--)
 								{
-								 Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i+1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j-1][l][m]);
-								 Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-								 Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-							 	 //Iold[i][j][l][m]=Int_new[i][j][l][m];
-								 Int_new[i][j][l][m]=(Nume+Source)/Deno;
-								 //rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/Int_new[i][j][l][m]; //printf("RMS=%lf\n",rms);
-								 }
+								 	Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i+1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j-1][l][m]);
+								 	Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+								 	Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+							 	 	//Iold[i][j][l][m]=Int_new[i][j][l][m];
+								 	Int_new[i][j][l][m]=(Nume+Source)/Deno;
+								 	//rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/Int_new[i][j][l][m]; //printf("RMS=%lf\n",rms);
+								}
 						 
 
 
@@ -250,13 +251,13 @@ int main()
 						 for(j=nj-2;j>=1;j--)
 						 	for(i=1;i<ni-1;i++)
 								{
-								 Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i-1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j+1][l][m]);
-								 Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-								 Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-							 	 //Iold[i][j][l][m]=Int_new[i][j][l][m];
-								 Int_new[i][j][l][m]=(Nume+Source)/Deno;
-								 //rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/Int_new[i][j][l][m];
-								 }
+								 	Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i-1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j+1][l][m]);
+								 	Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+								 	Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+							 	 	//Iold[i][j][l][m]=Int_new[i][j][l][m];
+								 	Int_new[i][j][l][m]=(Nume+Source)/Deno;
+								 	//rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/Int_new[i][j][l][m];
+								}
 						
 				
 
@@ -265,17 +266,17 @@ int main()
 						 for(j=nj-2;j>=1;j--)
 						 	for(i=ni-2;i>=1;i--)
 								{
-								 Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i+1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j+1][l][m]);
-								 Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-								 Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
-							 	 //Iold[i][j][l][m]=Int_new[i][j][l][m];
-								 Int_new[i][j][l][m]=(Nume+Source)/Deno;
-								 //rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/fabs(Int_new[i][j][l][m]); 
-								 }
+								 	Nume=dy*(fabs(*(D_x+np*l+m)))*(Int_new[i+1][j][l][m])+dx*(fabs(*(D_y+np*l+m)))*(Int_new[i][j+1][l][m]);
+								 	Source=(k[d]*sigma*pow(Tg,4)*w[d]/PI+S[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+								 	Deno=dy*(fabs(*(D_x+np*l+m)))+dx*(fabs(*(D_y+np*l+m)))+(k[d]+s[d]-B[i][j][l][m])*dx*dy*(*(D_omega+np*l+m));
+							 	 	//Iold[i][j][l][m]=Int_new[i][j][l][m];
+								 	Int_new[i][j][l][m]=(Nume+Source)/Deno;
+								 	//rms=fabs(Int_new[i][j][l][m]-Iold[i][j][l][m])/fabs(Int_new[i][j][l][m]); 
+								}
 
 			
 			
-////////////////////////////////////////////////////
+				////////////////////////////////////////////////////
 
 	
 				for(l=0;l<nt;l++)
@@ -287,15 +288,15 @@ int main()
 								sum1+=Int_new[i][j][l][m];
 								sum2+=Iold[i][j][l][m];
 								
-								}
-								rms1=fabs(sum1-sum2)/fabs(sum1+small);	
+							}
+							rms1=fabs(sum1-sum2)/fabs(sum1+small);	
 			
-			// printf("%d\t%lf\n",d,rms1);
-			// printf("helloji");
+				printf("%d\t%lf\n",d,rms1);
+				printf("helloji");
 
-	}while(rms1>1.0e-4);
-	//sum1=0;
-	//sum2=0;
+			}while(rms1>1.0e-4);
+			//sum1=0;
+			//sum2=0;
 		 		//printf("d=%d\n",d);
 			for(j=1;j<(nj-1);j++)
 				for(i=1;i<(ni-1);i++)	
@@ -318,8 +319,8 @@ int main()
 				}	
 		
 		
-		for(l=0;l<nt;l++)
-			for(m=0;m<np/2;m++)
+			for(l=0;l<nt;l++)
+				for(m=0;m<np/2;m++)
 				{	
 					q_w8=q_w8+(Int_new[(ni-2)/2][nj-2][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
 				}	
@@ -327,17 +328,17 @@ int main()
 			
 			
 			
-				for(l=0;l<nt;l++)
-					for(m=np/4;m<3*np/4;m++)
+			for(l=0;l<nt;l++)
+				for(m=np/4;m<3*np/4;m++)
 					{
-							q_w6=q_w6+(Int_new[1][(ni-2)/2][l][m])*fabs(*(D_x+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
+						q_w6=q_w6+(Int_new[1][(ni-2)/2][l][m])*fabs(*(D_x+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
 					}
 					
 			for(l=0;l<nt;l++)
 				 for(m=0;m<np/4;m++)
 						q_w7=q_w7+(Int_new[ni-2][(ni-2)/2][l][m])*fabs(*(D_x+np*l+m)); //-Int_new[1][j][l][m];
-					for(m=3*np/4;m<np;m++)
-						q_w7=q_w7+(Int_new[ni-2][(ni-2)/2][l][m])*fabs(*(D_x+np*l+m)); 				
+			for(m=3*np/4;m<np;m++)
+				q_w7=q_w7+(Int_new[ni-2][(ni-2)/2][l][m])*fabs(*(D_x+np*l+m)); 				
 		
 				
 			
@@ -346,103 +347,104 @@ int main()
 			fprintf(fp7,"%lf\t%lf\n",coun,q_w7);
 			fprintf(fp8,"%lf\t%lf\n",coun,q_w8);
 			fprintf(fp3,"%lf\t%lf\n",coun,q_w1);
-		} //End of absorption coefficient loop					
+		} 	//End of absorption coefficient loop
+
 		sleep(3);
-	time_t end = time(NULL);
-	printf("The time taken by while loop is %ld\n",end-begin);
+		time_t end = time(NULL);
+		printf("The time taken by while loop is %ld\n",end-begin);
 //////////////////////////////////////////////////////////////////////Heat Flux///////////////////////////////////////////////////////////////////////////////////	
 	
 		// bottom;
 		for(i=1;i<(ni-1);i++)
-			{ 
-			 q_w=0.0;
+		{ 
+			q_w=0.0;
 			for(l=0;l<nt;l++)
 				for(m=np/2;m<np;m++)
 				{	
 					q_w=q_w+(Int_new1[i][1][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
 				}				
-			  q3+=q_w;
-			  flux_bot[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(Tt,4));
-			 }
+			q3+=q_w;
+			flux_bot[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(Tt,4));
+		}
 			 
 			 			 
 			 /////////////top
 		for(i=1;i<(ni-1);i++)
-			{ 
-			 q_w=0.0;
+		{ 
+			q_w=0.0;
 			for(l=0;l<nt;l++)
 				for(m=0;m<np/2;m++)
 				{	
 					q_w=q_w+(Int_new1[i][nj-2][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
 				}				
 			 
-			  flux_bot_t[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
-			 }
+			flux_bot_t[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
+		}
 			 
 			 
 			///////left
-				for(j=1;j<nj-1;j++)							
-				{	
-				q_w=0.0;				 
-				for(l=0;l<nt;l++)
-					for(m=np/4;m<3*np/4;m++)
-					{
-							q_w=q_w+(Int_new1[1][j][l][m])*fabs(*(D_x+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
-					}				
-			   flux_bot_l[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
+		for(j=1;j<nj-1;j++)							
+		{	
+			q_w=0.0;				 
+			for(l=0;l<nt;l++)
+				for(m=np/4;m<3*np/4;m++)
+				{
+					q_w=q_w+(Int_new1[1][j][l][m])*fabs(*(D_x+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
+				}				
+			flux_bot_l[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
 							
-				}
+		}
 				
 				
 				///////right
-				for(j=1;j<nj-1;j++)							
-				{	
-				q_w=0.0;				 
-				for(l=0;l<nt;l++)
-				 for(m=0;m<np/4;m++)
-						q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); //-Int_new[1][j][l][m];
-					for(m=3*np/4;m<np;m++)
-						q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); 
+		for(j=1;j<nj-1;j++)							
+		{	
+			q_w=0.0;				 
+			for(l=0;l<nt;l++)
+				for(m=0;m<np/4;m++)
+					q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); //-Int_new[1][j][l][m];
+			for(m=3*np/4;m<np;m++)
+				q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); 
 							
-			 	  flux_bot_r[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
+			flux_bot_r[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
 							
-				}
+		}
 
 /////////////////////////////////////////////////////////////Contour//////////////////////////////////////////////////////////////////////////////////////////////
 
 
-			for(i=1;i<ni-1;i++)
-				{ 
-				 q_w=0.0,dq=0.0;
-				for(l=0;l<nt;l++)
-					for(m=0;m<np;m++)
-					{	
+		for(i=1;i<ni-1;i++)
+		{ 
+			q_w=0.0,dq=0.0;
+			for(l=0;l<nt;l++)
+				for(m=0;m<np;m++)
+				{	
 					dq+=as[i][10][l][m]*(*(D_omega+np*l+m));									
-					}				
-				  div_q[i]=-aa+dq;
-				 }
+				}				
+			div_q[i]=-aa+dq;
+		}
 
-for(j=1;j<(nj-1);j++)
+		for(j=1;j<(nj-1);j++)
 			for(i=1;i<ni-1;i++)
-				{ 
-				 q_w=0.0,dq=0.0;
+			{ 
+				q_w=0.0,dq=0.0;
 				for(l=0;l<nt;l++)
 					for(m=0;m<np;m++)
 					{	
 						dq+=as[i][j][l][m]*(*(D_omega+np*l+m));									
 					}				
-				  q2+=aa-dq;
-				 }
+				q2+=aa-dq;
+			}
 	
-	printf("Div is %lf\t and 4*flux is %lf\nthe error is %lf\n b-ve 1e4\n",q2*dx*dy,4*q3*dx,(fabs(q2*dx*dy)-fabs(4*q3*dx))*100/(fabs(q2*dx*dy)));
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+		printf("Div is %lf\t and 4*flux is %lf\nthe error is %lf\n b-ve 1e4\n",q2*dx*dy,4*q3*dx,(fabs(q2*dx*dy)-fabs(4*q3*dx))*100/(fabs(q2*dx*dy)));
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	
-		 for(i=1;i<(ni-1);i++)
-			{
+		for(i=1;i<(ni-1);i++)
+		{
 			fprintf(fp1,"%e\t%e\t%e\t%e\t%e\n",(i-0.5)*dx,flux_bot[i],flux_bot_t[i],flux_bot_l[i],flux_bot_r[i]);			
 			//fprintf(fp1,"%e\t%e\n",(i-0.5)*dx,flux_bot[i]);
 			fprintf(fp2,"%e\t%e\n",(i-0.5)*dx,div_q[i]);
-			}
+		}
 			
 		  
 	fclose(fp1);
