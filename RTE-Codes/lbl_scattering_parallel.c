@@ -199,7 +199,8 @@ int main() {
                         }
             rms1 = fabs(sum1 - sum2) / fabs(sum1 + small);
 
-            printf("%d\t%lf\n", d, rms1);
+            printf("%d\t%lf", d, rms1);
+            printf("     deno =%lf\n", Deno);
 
         } while (rms1 > 1.0e-4);
 
@@ -252,5 +253,6 @@ fprintf(fp7, "%lf\t%lf\n", coun, q_w7);
 fprintf(fp8, "%lf\t%lf\n", coun, q_w8);
 fprintf(fp3, "%lf\t%lf\n", coun, q_w1);
     }
+	return 0;
 }
     
