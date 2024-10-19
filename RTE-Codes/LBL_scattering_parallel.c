@@ -307,94 +307,94 @@ int main()
 
 //////////////////////////////////////////////////////////////////////Heat Flux///////////////////////////////////////////////////////////////////////////////////	
     
-// bottom;
-for(i=1;i<(ni-1);i++)
-{ 
-    q_w=0.0;
-    for(l=0;l<nt;l++)
-        for(m=np/2;m<np;m++)
-        {	
-            q_w=q_w+(Int_new1[i][1][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
-        }				
-    q3+=q_w;
-    flux_bot[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(Tt,4));
-}
+    // bottom;
+    for(i=1;i<(ni-1);i++)
+    { 
+        q_w=0.0;
+        for(l=0;l<nt;l++)
+            for(m=np/2;m<np;m++)
+            {	
+                q_w=q_w+(Int_new1[i][1][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
+            }				
+        q3+=q_w;
+        flux_bot[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(Tt,4));
+    }
              
              
-/////////////top
-for(i=1;i<(ni-1);i++)
-{ 
-    q_w=0.0;
-    for(l=0;l<nt;l++)
-        for(m=0;m<np/2;m++)
-        {	
-            q_w=q_w+(Int_new1[i][nj-2][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
-        }				
-    flux_bot_t[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
-}
+    /////////////top
+    for(i=1;i<(ni-1);i++)
+    { 
+        q_w=0.0;
+        for(l=0;l<nt;l++)
+            for(m=0;m<np/2;m++)
+            {	
+                q_w=q_w+(Int_new1[i][nj-2][l][m])*fabs(*(D_y+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
+            }				
+        flux_bot_t[i]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
+    }
              
              
-///////left
-for(j=1;j<nj-1;j++)							
-{	
-    q_w=0.0;				 
-    for(l=0;l<nt;l++)
-        for(m=np/4;m<3*np/4;m++)
-        {
-            q_w=q_w+(Int_new1[1][j][l][m])*fabs(*(D_x+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
-        }				
-    flux_bot_l[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
-}
+    ///////left
+    for(j=1;j<nj-1;j++)							
+    {	
+        q_w=0.0;				 
+        for(l=0;l<nt;l++)
+            for(m=np/4;m<3*np/4;m++)
+            {
+                q_w=q_w+(Int_new1[1][j][l][m])*fabs(*(D_x+np*l+m)); //printf("Int=%lf\n",Int_new1[i][1][l][m]);
+            }				
+        flux_bot_l[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
+    }
                 
                 
-///////right
-for(j=1;j<nj-1;j++)							
-{	
-    q_w=0.0;				 
-    for(l=0;l<nt;l++)
-        for(m=0;m<np/4;m++)
-            q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); //-Int_new[1][j][l][m];
-        for(m=3*np/4;m<np;m++)
-            q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); 
-    flux_bot_r[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
-}
+    ///////right
+    for(j=1;j<nj-1;j++)							
+    {	
+        q_w=0.0;				 
+        for(l=0;l<nt;l++)
+            for(m=0;m<np/4;m++)
+                q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); //-Int_new[1][j][l][m];
+            for(m=3*np/4;m<np;m++)
+                q_w=q_w+(Int_new1[ni-2][j][l][m])*fabs(*(D_x+np*l+m)); 
+        flux_bot_r[j]=(sigma*pow(Tb,4)-q_w)/(sigma*pow(1000,4));
+    }
 
-/////////////////////////////////////////////////////////////Contour//////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////Contour//////////////////////////////////////////////////////////////////////////////////////////////
 
-for(i=1;i<ni-1;i++)
-{ 
-    q_w=0.0,dq=0.0;
-    for(l=0;l<nt;l++)
-        for(m=0;m<np;m++)
-        {	
-            dq+=as[i][10][l][m]*(*(D_omega+np*l+m));									
-        }				
-    div_q[i]=-aa+dq;
-}
-
-for(j=1;j<(nj-1);j++)
     for(i=1;i<ni-1;i++)
     { 
         q_w=0.0,dq=0.0;
         for(l=0;l<nt;l++)
             for(m=0;m<np;m++)
             {	
-                dq+=as[i][j][l][m]*(*(D_omega+np*l+m));									
+                dq+=as[i][10][l][m]*(*(D_omega+np*l+m));									
             }				
-        q2+=aa-dq;
+        div_q[i]=-aa+dq;
     }
+
+    for(j=1;j<(nj-1);j++)
+        for(i=1;i<ni-1;i++)
+        { 
+            q_w=0.0,dq=0.0;
+            for(l=0;l<nt;l++)
+                for(m=0;m<np;m++)
+                {	
+                    dq+=as[i][j][l][m]*(*(D_omega+np*l+m));									
+                }				
+            q2+=aa-dq;
+        }
     
-printf("Div is %lf\t and 4*flux is %lf\nthe error is %lf\n b-ve 1e4\n",q2*dx*dy,4*q3*dx,(fabs(q2*dx*dy)-fabs(4*q3*dx))*100/(fabs(q2*dx*dy)));
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+    printf("Div is %lf\t and 4*flux is %lf\nthe error is %lf\n b-ve 1e4\n",q2*dx*dy,4*q3*dx,(fabs(q2*dx*dy)-fabs(4*q3*dx))*100/(fabs(q2*dx*dy)));
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
     
-for(i=1;i<(ni-1);i++)
-{
-    fprintf(fp1,"%e\t%e\t%e\t%e\t%e\n",(i-0.5)*dx,flux_bot[i],flux_bot_t[i],flux_bot_l[i],flux_bot_r[i]);			
-    //fprintf(fp1,"%e\t%e\n",(i-0.5)*dx,flux_bot[i]);
-    fprintf(fp2,"%e\t%e\n",(i-0.5)*dx,div_q[i]);
-}
+    for(i=1;i<(ni-1);i++)
+    {
+        fprintf(fp1,"%e\t%e\t%e\t%e\t%e\n",(i-0.5)*dx,flux_bot[i],flux_bot_t[i],flux_bot_l[i],flux_bot_r[i]);			
+        //fprintf(fp1,"%e\t%e\n",(i-0.5)*dx,flux_bot[i]);
+        fprintf(fp2,"%e\t%e\n",(i-0.5)*dx,div_q[i]);
+    }
           
-fclose(fp1);
-fclose(fp2);
-return 0;
+    fclose(fp1);
+    fclose(fp2);
+    return 0;
 }
